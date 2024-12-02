@@ -9,10 +9,11 @@ import SwiftUI
 
 struct kayitEkrani: View {
     @State var kayit = false
+    @State var anaSayfam = false
     @State var kullanciAdi = ""
     @State var sifre = ""
     var body: some View {
-   
+        
         VStack(spacing:25) {
             
             ZStack{
@@ -23,7 +24,7 @@ struct kayitEkrani: View {
                 Text("ProFitness")
                     .font(.customfont(font: .semiBold, fontSize: 25))
                     .maxConter
-               
+                
             }
             
             Text("Hesabınız varsa giriş yapın veya yeni bir hesap oluşturun")
@@ -51,11 +52,11 @@ struct kayitEkrani: View {
                     .all15
                     .background(Color.txtBg)
                     .cornerRadius(15)
-                  
+                
             }
             HStack{
                 Button(action:{
-                    
+                    anaSayfam = true
                     
                 }, label:{
                     Text("GirisYap")
@@ -67,11 +68,10 @@ struct kayitEkrani: View {
                 .frame(width: 120, height: 40)
                 .background(Color.primaryApp)
                 .cornerRadius(25)
-               
                 
+               
             }
-
-            
+          
             
             Divider()
             Text("eger daha kayit olmadisizsa simdi altta KAYITOL butona tiklayarak kayit ola bilirsiniz")
@@ -98,16 +98,17 @@ struct kayitEkrani: View {
             .background(.regularMaterial)
             .mask(RoundedRectangle(cornerRadius: 60, style: .continuous))
             .padding(11)
-       
+        
             .bgNavlink(content: KayitOl(), isAction: $kayit)
+            .bgNavlink(content: ContentView(), isAction: $anaSayfam)
     }
-    
-    
+        
 }
 
 #Preview {
     NavigationView{
         kayitEkrani()
+        
     }
     
 }
