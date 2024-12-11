@@ -14,6 +14,15 @@ enum popins: String{
     case semiBold = "Popins-SemiBold"
     case Bold = "Popins-Bold"
 }
+extension UITabBar {
+    static func setupAppearance() {
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.white // Tab Bar arka plan rengi
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+    }
+}
 //          kullanim ornegi
 //.font(.customfont(font: .Bold, fontSize: 18))
 // .font(.customfont(font: .light, fontSize: 20))
@@ -145,6 +154,8 @@ extension Color {
         )
     }
 }
+
+
 extension View{
     func cornerRadius(_ radius: CGFloat,corner:UIRectCorner) ->some View{
         clipShape(Roundedcorner(radius: radius, corner: corner))

@@ -1,23 +1,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UITabBar.setupAppearance() // Ayarları burada çağırıyoruz
+    }
+   
     var body: some View {
-        TabView {
-            asd()
+        
+        TabView  {
+            diyet()
                 .tabItem {
-                    Label("Home", systemImage: "house")
-                }
+                        Label("Home", systemImage: "house")
+                     }
             
             dsa()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
             
-            sad()
+                sad()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
+                .tabViewStyle(.sidebarAdaptable)
         }
+        
     }
 }
 

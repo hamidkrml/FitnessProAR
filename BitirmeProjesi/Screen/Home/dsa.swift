@@ -9,7 +9,22 @@ import SwiftUI
 
 struct dsa: View {
     var body: some View {
-        Image("image1")
+        VStack{
+            HStack{
+                Image("fitness")
+                    .resizable()
+                    .frame(width: 60, height: 50)
+                    .padding()
+                Text("ProFitness")
+                        .font(.customfont(font: .Bold, fontSize:40))
+                
+            }.maxLeft
+            
+           
+            
+            
+            Spacer()
+        }
     }
 }
 

@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0390CD7D2D03528800C546A6 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0390CD7C2D03528800C546A6 /* Vision.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		03092BB92CF872CC00410E27 /* BitirmeProjesi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitirmeProjesi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0390CD7C2D03528800C546A6 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0390CD7D2D03528800C546A6 /* Vision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				03092BBB2CF872CC00410E27 /* BitirmeProjesi */,
+				0390CD7B2D03528800C546A6 /* Frameworks */,
 				03092BBA2CF872CC00410E27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +63,14 @@
 				03092BB92CF872CC00410E27 /* BitirmeProjesi.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0390CD7B2D03528800C546A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0390CD7C2D03528800C546A6 /* Vision.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +285,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitirmeProjesi/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "kameraya erisim gerekiyor";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,6 +316,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitirmeProjesi/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "kameraya erisim gerekiyor";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
