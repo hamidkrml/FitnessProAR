@@ -1,5 +1,5 @@
 //
-//  sad.swift
+//  dsa.swift
 //  BitirmeProjesi
 //
 //  Created by hamid on 02.12.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct sad: View {
+struct dsa: View {
     var body: some View {
         VStack{
             HStack{
@@ -29,5 +29,5 @@ struct sad: View {
 }
 
 #Preview {
-    sad()
+    dsa()
 }

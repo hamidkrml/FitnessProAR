@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "fitness.png",
+      "filename" : "fitness.jpg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -13,7 +13,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "fitness 1.png",
+      "filename" : "fitness 1.jpg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -25,7 +25,7 @@
           "value" : "tinted"
         }
       ],
-      "filename" : "fitness 2.png",
+      "filename" : "fitness 2.jpg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
