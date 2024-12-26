@@ -7,12 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0390CD7D2D03528800C546A6 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0390CD7C2D03528800C546A6 /* Vision.framework */; };
+		03AC69C52D18438F0094E8B2 /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C42D18438F0094E8B2 /* QuickPoseCamera */; };
+		03AC69C72D18438F0094E8B2 /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C62D18438F0094E8B2 /* QuickPoseCore */; };
+		03AC69C92D18438F0094E8B2 /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C82D18438F0094E8B2 /* QuickPoseMP */; };
+		03AC69CB2D18438F0094E8B2 /* QuickPoseSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69CA2D18438F0094E8B2 /* QuickPoseSwiftUI */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03AC69642D1731120094E8B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03092BB92CF872CC00410E27 /* BitirmeProjesi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitirmeProjesi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0390CD7C2D03528800C546A6 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -41,7 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0390CD7D2D03528800C546A6 /* Vision.framework in Frameworks */,
+				03AC69C72D18438F0094E8B2 /* QuickPoseCore in Frameworks */,
+				03AC69C92D18438F0094E8B2 /* QuickPoseMP in Frameworks */,
+				03AC69C52D18438F0094E8B2 /* QuickPoseCamera in Frameworks */,
+				03AC69CB2D18438F0094E8B2 /* QuickPoseSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				03092BBB2CF872CC00410E27 /* BitirmeProjesi */,
-				0390CD7B2D03528800C546A6 /* Frameworks */,
+				03998E4D2D134905005AF92B /* Frameworks */,
 				03092BBA2CF872CC00410E27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,10 +83,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0390CD7B2D03528800C546A6 /* Frameworks */ = {
+		03998E4D2D134905005AF92B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0390CD7C2D03528800C546A6 /* Vision.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,6 +100,7 @@
 				03092BB52CF872CC00410E27 /* Sources */,
 				03092BB62CF872CC00410E27 /* Frameworks */,
 				03092BB72CF872CC00410E27 /* Resources */,
+				03AC69642D1731120094E8B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +111,10 @@
 			);
 			name = BitirmeProjesi;
 			packageProductDependencies = (
+				03AC69C42D18438F0094E8B2 /* QuickPoseCamera */,
+				03AC69C62D18438F0094E8B2 /* QuickPoseCore */,
+				03AC69C82D18438F0094E8B2 /* QuickPoseMP */,
+				03AC69CA2D18438F0094E8B2 /* QuickPoseSwiftUI */,
 			);
 			productName = BitirmeProjesi;
 			productReference = 03092BB92CF872CC00410E27 /* BitirmeProjesi.app */;
@@ -122,6 +144,9 @@
 			);
 			mainGroup = 03092BB02CF872CC00410E27;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 03092BBA2CF872CC00410E27 /* Products */;
 			projectDirPath = "";
@@ -278,18 +303,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BitirmeProjesi/Preview Content\"";
 				DEVELOPMENT_TEAM = L7F6X2DV8Y;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitirmeProjesi/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "kameraya erisim gerekiyor";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = NSCameraUsageDescription;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,6 +327,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamidKarimli.BitirmeProjesi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,18 +340,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BitirmeProjesi/Preview Content\"";
 				DEVELOPMENT_TEAM = L7F6X2DV8Y;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BitirmeProjesi/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "kameraya erisim gerekiyor";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = NSCameraUsageDescription;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +364,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamidKarimli.BitirmeProjesi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,6 +393,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quickpose/quickpose-ios-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03AC69C42D18438F0094E8B2 /* QuickPoseCamera */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseCamera;
+		};
+		03AC69C62D18438F0094E8B2 /* QuickPoseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseCore;
+		};
+		03AC69C82D18438F0094E8B2 /* QuickPoseMP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseMP;
+		};
+		03AC69CA2D18438F0094E8B2 /* QuickPoseSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03092BB12CF872CC00410E27 /* Project object */;
 }

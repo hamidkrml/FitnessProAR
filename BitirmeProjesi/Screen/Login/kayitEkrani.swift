@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+//import Firebase
 
 struct kayitEkrani: View {
+//@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @State var kayit = false
     @State var anaSayfam = false
     @State var kullanciAdi = ""
@@ -20,6 +22,7 @@ struct kayitEkrani: View {
                 Image("fitness")
                     .resizable() // Görseli yeniden boyutlandırmak için
                     .frame(width: 60, height: 60) // Küçük boyut (ikon gibi)
+                    .cornerRadius(20)
                     .maxLeft
                 Text("ProFitness")
                     .font(.customfont(font: .semiBold, fontSize: 25))
@@ -48,7 +51,7 @@ struct kayitEkrani: View {
                 Text("Sifre")
                     .maxLeft
                     .font(.customfont(font: .light, fontSize: 13))
-                TextField("SifreniziGirin" ,text: $sifre)
+                SecureField("SifreniziGirin" ,text: $sifre)
                     .all15
                     .background(Color.txtBg)
                     .cornerRadius(15)
@@ -74,8 +77,8 @@ struct kayitEkrani: View {
           
             
             Divider()
-            Text("eger daha kayit olmadisizsa simdi altta KAYITOL butona tiklayarak kayit ola bilirsiniz")
-                .bottom8
+            Text("Veya")
+                
             HStack{
                 Button(action:{
                     kayit = true
@@ -87,17 +90,13 @@ struct kayitEkrani: View {
                         .padding(.horizontal, 15)
                     
                 })
-                .foregroundColor(.btPrimaryApp)
-                .frame(width: 120, height: 40)
-                .background(Color.primaryApp)
-                .cornerRadius(25)
-                .padding(.bottom, .bottomInsets + 16)
+                
                 
             }
         }   .padding(30)
             .background(.regularMaterial)
             .mask(RoundedRectangle(cornerRadius: 60, style: .continuous))
-            .padding(11)
+            .padding(10)
         
             .bgNavlink(content: KayitOl(), isAction: $kayit)
             .bgNavlink(content: ContentView(), isAction: $anaSayfam)
