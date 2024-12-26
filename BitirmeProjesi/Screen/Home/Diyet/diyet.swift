@@ -1,55 +1,64 @@
 //
-//  asd.swift
+//  Diyet.swift
 //  BitirmeProjesi
 //
-//  Created by hamid on 02.12.24.
+//  Created by hamid on 17.12.24.
 //
 
 import SwiftUI
 
-struct diyet: View {
-    let columuns : [GridItem] = [GridItem(.flexible()),
-                                 GridItem(.flexible()),
-                                 GridItem(.flexible())
-                                ]
+struct Diyet: View {
+    @StateObject var viewModel = FrameworkGridViewModel()
+    let columns: [GridItem] = [GridItem(.flexible()),
+                                GridItem(.flexible()),
+                                GridItem(.flexible())]
+    var body: some View {
+        NavigationView{
+            ScrollView{
+                LazyVGrid(columns: columns) {
+                    ForEach(MockData.frameworks){ framework in
+                        
+                        FrameworkTitleView(framework: framework)
+                            .onTapGesture{
+                                viewModel.selecedFramework = framework
+                            }
+                    }
+                }
+            }
+            .navigationTitle("Diyet")
+            .sheet(isPresented: $viewModel.isShowingDetailView) {
+                FramworkDetailView(framework: viewModel.selecedFramework!,  
+                                   isShowingDetailView: $viewModel.isShowingDetailView)
+            }
+        }
+        
+    }
+}
+
+#Preview {
+    Diyet()
+}
+
+struct FrameworkTitleView: View {
+   let framework: Framework
     
     var body: some View {
-        ZStack{
-            NavigationView{
-                ScrollView{
-                    
-                    
-                    VStack{
-                        Image("fitness")
-                            .resizable()
-                            .frame(width: 380, height: 320)
-                            .cornerRadius(15)
-                    }
-                    
-                    
-                    Divider()
-                    Text("Diyetlerimiz")
-                        .font(.customfont(font: .light, fontSize: 35))
-                        .maxLeft
-                    LazyVGrid(columns: columuns){
-                    ForEach(mocdata.diyetverisi){ diyetverileri in
-                        yemekfonk(diyetverileri: diyetverileri)
-                                }
-                        }
-                    
-                }
-               
-                .navigationTitle("ProFitness")
-                
-                }
+        VStack{
+            Image( framework.imageName)
+                .resizable()
+                .frame(width: 90,height: 90)
+            Text(framework.name)
+                .font(.title2)
+                .fontWeight(.semibold)
+                .scaledToFit()
+                .minimumScaleFactor(0.5)
+            
+            
         }
-      .navHide
-       
+        .padding()
     }
-       
+
+    
 }
-   
-#Preview {
-    diyet()
-}
+
 

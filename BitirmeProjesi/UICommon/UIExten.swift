@@ -6,7 +6,30 @@
 //
 
 import SwiftUI
-// ozel yazi tipleri ttf olarak projeye entegre olundu 
+import QuickPoseCore
+
+
+
+func textal(label1:String) -> some View{
+    Text(label1)
+        .maxLeft
+        .font(.customfont(font: .semiBold, fontSize: 14))
+}
+func textfiealdal(label2:String,text:Binding<String>) -> some View{
+    TextField(label2,text: text)
+        .all15
+        .background(Color.txtBg)
+        .cornerRadius(15)
+        .bottom15
+}
+
+
+
+
+
+// ozel yazi tipleri ttf olarak projeye entegre olundu
+
+
 enum popins: String{
     case light = "Popins-Light"
     case regular = "Popins-Regular"
@@ -157,6 +180,9 @@ extension Color {
 
 
 extension View{
+    
+   
+    
     func cornerRadius(_ radius: CGFloat,corner:UIRectCorner) ->some View{
         clipShape(Roundedcorner(radius: radius, corner: corner))
     }
