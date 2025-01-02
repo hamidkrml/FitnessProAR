@@ -99,17 +99,11 @@ struct KayitOl: View {
                         hamit = true
                         
                     }, label:{
-                        Text("Kayit Ol")
-                            .font(.customfont(font: .light, fontSize: 15))
-                            .padding(.horizontal, 15)
+                        Buttongenel(adyaz: "Kayitol")
+                            
                         
                     })
                 }
-                .foregroundColor(.btPrimaryApp)
-                .frame(width: 120, height: 40)
-                .background(Color.primaryApp)
-                .cornerRadius(25)
-                .padding(.bottom, .bottomInsets + 16)
                 
                 
                 

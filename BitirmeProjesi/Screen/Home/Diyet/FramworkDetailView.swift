@@ -36,14 +36,10 @@ struct FramworkDetailView: View {
             Button{
                 
             }label: {
-                Text("Buy")
+                Buttongenel(adyaz: "buy")
                 
             }
-                .foregroundColor(.btPrimaryApp)
-                .frame(width: 120, height: 40)
-                .background(Color.primaryApp)
-                .cornerRadius(25)
-                .padding(.bottom, .bottomInsets + 16)
+        
         }
     }
 }

@@ -10,7 +10,7 @@ import QuickPoseSwiftUI
 
 struct BicepsView: View {
    
-    var quickPose1 = QuickPose(sdkKey: "01JFD89MTDV57D9DNCMB5ZTGV5")
+    
     @State private var feedbackText: String? = nil
     @State var overlayImag: UIImage?
     @State private var counter = QuickPoseThresholdCounter()
@@ -19,7 +19,7 @@ struct BicepsView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack{
-                QuickPoseCameraView(useFrontCamera: true, delegate: quickPose1)
+                QuickPoseCameraView(useFrontCamera: true, delegate: QuickPoseManager.shared)
                 QuickPoseOverlayView(overlayImage: $overlayImag)
             }
             
@@ -36,7 +36,7 @@ struct BicepsView: View {
             
             .onAppear{
                 let greenHighlightStyle = QuickPose.Style(conditionalColors: [QuickPose.Style.ConditionalColor(min: 0.4, max: nil, color: UIColor.yellow)])
-                quickPose1.start(features: [.fitness(.bicepCurls,style: greenHighlightStyle)],
+                QuickPoseManager.shared.start(features: [.fitness(.bicepCurls,style: greenHighlightStyle)],
                                  onFrame: { status, image, features, feedback, landmarks in
                     
                     overlayImag = image
@@ -50,6 +50,8 @@ struct BicepsView: View {
                     
                     
                 })
+            }.onDisappear{
+                QuickPoseManager.shared.stop()
             }
         }
     }

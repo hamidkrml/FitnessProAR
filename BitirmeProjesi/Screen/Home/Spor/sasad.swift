@@ -5,7 +5,7 @@ struct Biceps: View {
        
             VStack{
                 
-                Text("hamid")
+                
             }
         }
 }

@@ -62,21 +62,17 @@ struct kayitEkrani: View {
                     anaSayfam = true
                     
                 }, label:{
-                    Text("GirisYap")
-                        .font(.customfont(font: .light, fontSize: 15))
-                        .padding(.horizontal, 15)
+                    Buttongenel(adyaz: "GirisYap")
+                        
                     
                 })
-                .foregroundColor(.btPrimaryApp)
-                .frame(width: 120, height: 40)
-                .background(Color.primaryApp)
-                .cornerRadius(25)
+                
                 
                
             }
           
             
-            Divider()
+           
             Text("Veya")
                 
             HStack{
@@ -85,9 +81,7 @@ struct kayitEkrani: View {
                     
                     
                 }, label:{
-                    Text("Kayit Ol")
-                        .font(.customfont(font: .light, fontSize: 15))
-                        .padding(.horizontal, 15)
+                    Buttongenel(adyaz: "KayitOl")
                     
                 })
                 
