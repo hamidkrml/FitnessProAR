@@ -1,8 +1,6 @@
-
 import SwiftUI
 
-struct Squats: View {
-    
+struct Squatvid: View {
     @State var squat = false
     var body: some View {
         VStack(spacing:10){
@@ -29,10 +27,7 @@ struct Squats: View {
                 
             })
             
-        }.bgNavlink(content: BicepsView(), isAction: $squat)
+        }.bgNavlink(content: SquatView(), isAction: $squat)
     }
-}
-
-#Preview {
-    Squats()
+    
 }

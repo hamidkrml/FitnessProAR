@@ -2,7 +2,6 @@
 import SwiftUI
 
 
-// Ana görünüm
 struct spor: View {
     let columns = [
         GridItem(.flexible())
@@ -14,12 +13,12 @@ struct spor: View {
                 LazyVGrid(columns: columns, spacing: 25) {
                     
                     
-                    NavigationLink(destination: Biceps()) {
+                    NavigationLink(destination: Squatvid()) {
                         HStack(spacing: 50) {
-                            Image("bicep")
+                            Image("squat")
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                            Text("Biceps")
+                            Text("Squat ")
                                 .font(.title2)
                                 .foregroundColor(.black)
                             
@@ -27,13 +26,13 @@ struct spor: View {
                         .maxLeft
                     }
                     
-                    NavigationLink(destination: Squats()) {
+                    NavigationLink(destination: Bicepvid()) {
                         HStack(spacing: 50  ) {
                             
-                            Image("squat")
+                            Image("bicep")
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                            Text("Squat")
+                            Text("Biceps ")
                                 .font(.title2)
                                 .foregroundColor(.black)
                         }
@@ -64,7 +63,7 @@ struct spor: View {
                         .maxLeft
                     }
                    
-                    NavigationLink(destination: Squats()) {
+                    NavigationLink(destination: SecondItemDetail()) {
                         HStack(spacing: 50) {
                             
                             Image("squat")
