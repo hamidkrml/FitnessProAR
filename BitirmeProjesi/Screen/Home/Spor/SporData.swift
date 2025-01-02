@@ -27,7 +27,7 @@ struct spor: View {
                         .maxLeft
                     }
                     
-                    NavigationLink(destination: SecondItemDetail()) {
+                    NavigationLink(destination: Squats()) {
                         HStack(spacing: 50  ) {
                             
                             Image("squat")
@@ -90,7 +90,4 @@ struct spor: View {
     }
 }
 
-// Detay görünümleri
-#Preview {
-    spor()
-}
+
