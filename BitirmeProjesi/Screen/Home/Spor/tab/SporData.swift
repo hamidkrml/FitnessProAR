@@ -17,7 +17,7 @@ struct spor: View {
                         HStack(spacing: 50) {
                             Image("squat")
                                 .resizable()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 110, height: 100)
                             Text("Squat ")
                                 .font(.title2)
                                 .foregroundColor(.black)
@@ -31,26 +31,26 @@ struct spor: View {
                             
                             Image("bicep")
                                 .resizable()
-                                .frame(width: 100, height: 100)
+                                .frame(width: 110, height: 100)
                             Text("Biceps ")
                                 .font(.title2)
                                 .foregroundColor(.black)
                         }
                         .maxLeft
                     }
-                    NavigationLink(destination: SecondItemDetail()) {
+                    NavigationLink(destination: Standingvid()) {
                         HStack(spacing: 50) {
                             
-                            Image("bicep")
+                            Image("abdu")
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                            Text("Squat")
+                            Text("Standing")
                                 .font(.title2)
                                 .foregroundColor(.black)
                         }
                         .maxLeft
                     }
-                    NavigationLink(destination: SecondItemDetail()) {
+                    NavigationLink(destination: Standingvid()) {
                         HStack(spacing: 50) {
                             
                             Image("bicep")
@@ -63,7 +63,7 @@ struct spor: View {
                         .maxLeft
                     }
                    
-                    NavigationLink(destination: SecondItemDetail()) {
+                    NavigationLink(destination: Standingvid()) {
                         HStack(spacing: 50) {
                             
                             Image("squat")
@@ -90,3 +90,6 @@ struct spor: View {
 }
 
 
+#Preview {
+    spor()
+}
