@@ -41,22 +41,22 @@ struct spor: View {
                     NavigationLink(destination: Standingvid()) {
                         HStack(spacing: 50) {
                             
-                            Image("abdu")
+                            Image("lateral")
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                            Text("Standing")
+                            Text("lateral")
                                 .font(.title2)
                                 .foregroundColor(.black)
                         }
                         .maxLeft
                     }
-                    NavigationLink(destination: Standingvid()) {
+                    NavigationLink(destination: Pressvid()) {
                         HStack(spacing: 50) {
                             
-                            Image("bicep")
+                            Image("dumbel")
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                            Text("Squat")
+                            Text("dumbelPres")
                                 .font(.title2)
                                 .foregroundColor(.black)
                         }
