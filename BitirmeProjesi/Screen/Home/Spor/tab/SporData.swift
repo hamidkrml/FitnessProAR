@@ -63,14 +63,27 @@ struct spor: View {
                         .maxLeft
                     }
                    
-                    NavigationLink(destination: Standingvid()) {
+                    NavigationLink(destination: Lsagvid()) {
                         HStack(spacing: 50) {
                             
-                            Image("squat")
+                            Image("sag")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                            Text("Lungess")
+                                .font(.title2)
+                                .foregroundColor(.black)
+                        }
+                        .maxLeft
+                    }
+                    
+                    NavigationLink(destination: Lsolvid()) {
+                        HStack(spacing: 50) {
+                            
+                            Image("sol")
                                 .resizable()
                                 .frame(width: 100, height: 100)
                             
-                            Text("Squat")
+                            Text("Lungess")
                                 .font(.title2)
                                 .foregroundColor(.black)
                             

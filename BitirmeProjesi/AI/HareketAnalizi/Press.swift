@@ -43,7 +43,7 @@ struct Press: View {
                      ov = image
                      if let result = features.values.first  {
                          let counterState = coun.count(result.value)
-                         hadi = ("DumbbellPress: \(counterState.count) ")
+                         hadi = ("Dumbbel: \(counterState.count) ")
                          
                          
                      }

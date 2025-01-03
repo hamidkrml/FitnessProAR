@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct BitirmeProjesiApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView(){
-                tanitimSayfasi()
-            }
-            .navigationViewStyle(.stack)
+            ContentView()
         }
     }
 }

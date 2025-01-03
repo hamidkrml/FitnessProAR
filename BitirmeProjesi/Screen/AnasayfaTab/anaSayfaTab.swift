@@ -19,7 +19,7 @@ struct ContentView: View {
                         Label("Diyet", systemImage: "heart.text.clipboard.fill")
                     }
                 
-                    sad()
+                sad()
                     .tabItem {
                         Label("Hesap", systemImage: "slider.horizontal.2.arrow.trianglehead.counterclockwise")
                     }
