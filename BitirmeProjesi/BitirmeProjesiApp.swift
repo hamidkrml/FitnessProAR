@@ -14,7 +14,10 @@ struct BitirmeProjesiApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                tanitimSayfasi()
+            }
+           
         }
     }
 }
