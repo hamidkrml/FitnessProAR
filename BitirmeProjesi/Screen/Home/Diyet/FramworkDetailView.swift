@@ -36,8 +36,8 @@ struct FramworkDetailView: View {
             Button{
                 
             }label: {
-                Buttongenel(adyaz: "buy")
-                
+                Buttongenel(adyaz: "Yemeyin Kalorisi")
+              
             }
         
         }

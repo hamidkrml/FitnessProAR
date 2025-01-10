@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030AE4AA2D305C89000847C9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 030AE4A92D305C89000847C9 /* FirebaseAuth */; };
 		03AC69C52D18438F0094E8B2 /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C42D18438F0094E8B2 /* QuickPoseCamera */; };
 		03AC69C72D18438F0094E8B2 /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C62D18438F0094E8B2 /* QuickPoseCore */; };
 		03AC69C92D18438F0094E8B2 /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C82D18438F0094E8B2 /* QuickPoseMP */; };
@@ -57,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03AC69C72D18438F0094E8B2 /* QuickPoseCore in Frameworks */,
+				030AE4AA2D305C89000847C9 /* FirebaseAuth in Frameworks */,
 				03AC69C92D18438F0094E8B2 /* QuickPoseMP in Frameworks */,
 				03AC69C52D18438F0094E8B2 /* QuickPoseCamera in Frameworks */,
 				03AC69CB2D18438F0094E8B2 /* QuickPoseSwiftUI in Frameworks */,
@@ -115,6 +117,7 @@
 				03AC69C62D18438F0094E8B2 /* QuickPoseCore */,
 				03AC69C82D18438F0094E8B2 /* QuickPoseMP */,
 				03AC69CA2D18438F0094E8B2 /* QuickPoseSwiftUI */,
+				030AE4A92D305C89000847C9 /* FirebaseAuth */,
 			);
 			productName = BitirmeProjesi;
 			productReference = 03092BB92CF872CC00410E27 /* BitirmeProjesi.app */;
@@ -146,6 +149,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */,
+				030AE4A82D305C89000847C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 03092BBA2CF872CC00410E27 /* Products */;
@@ -395,6 +399,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		030AE4A82D305C89000847C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
 		03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quickpose/quickpose-ios-sdk.git";
@@ -406,6 +418,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		030AE4A92D305C89000847C9 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 030AE4A82D305C89000847C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		03AC69C42D18438F0094E8B2 /* QuickPoseCamera */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;

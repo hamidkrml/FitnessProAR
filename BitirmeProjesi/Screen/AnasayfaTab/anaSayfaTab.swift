@@ -19,9 +19,14 @@ struct ContentView: View {
                         Label("Diyet", systemImage: "heart.text.clipboard.fill")
                     }
                 
+                
                 sad()
                     .tabItem {
-                        Label("Hesap", systemImage: "slider.horizontal.2.arrow.trianglehead.counterclockwise")
+                        Label("Level", systemImage: "slider.horizontal.2.arrow.trianglehead.counterclockwise")
+                    }
+                hesapbilgileri()
+                    .tabItem {
+                        Label("hesap ", systemImage: "lock.fill")
                     }
                     .tabViewStyle(.sidebarAdaptable)
             }
