@@ -6,10 +6,18 @@ struct spor: View {
     let columns = [
         GridItem(.flexible())
     ]
-    
+    let gridRows = [GridItem(.adaptive(minimum: 150))]
     var body: some View {
+        
+        
+        
+        SporHaberleri_()
+        
+        Divider()
         NavigationView {
+            
             ScrollView {
+                
                 LazyVGrid(columns: columns, spacing: 25) {
                     
                     
@@ -96,7 +104,7 @@ struct spor: View {
                 .padding()
             }
         
-            .navigationTitle("Sporlarimiz")
+            
             
         }.navHide
     }

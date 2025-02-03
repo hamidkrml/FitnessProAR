@@ -20,8 +20,8 @@ struct kayitEkrani: View {
             
             ZStack{
                 Image("fitness")
-                    .resizable() // Görseli yeniden boyutlandırmak için
-                    .frame(width: 60, height: 60) // Küçük boyut (ikon gibi)
+                    .resizable()
+                    .frame(width: 60, height: 60) 
                     .cornerRadius(20)
                     .maxLeft
                 Text("ProFitness")
