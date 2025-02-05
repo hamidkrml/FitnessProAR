@@ -4,31 +4,29 @@ import SwiftUI
 struct Bicepvid: View {
     
     @State var bicep = false
+    
     var body: some View {
-        VStack(spacing:10){
-            VideoPlayerToplu(videoad: "squatVideo")
-            
-            Divider()
-            Spacer()
-            VStack(spacing:20){
-                Text("Kas geliştirme antrenmanlarında genellikle ilk uygulanan egzersizdir. Hormonların uyarılmasını sağlayarak vücudun kas yapmasına yardımcı olur. ")
+        
+            VStack(spacing:10){
                 
-                Text("Eger dogru Yapip yapmadiginizi Kontrol etmek istiyorsanizsa button tiklayarak AI ozeligili ile kactene yapa biliyosunuz deye kontrol ede bilirsinz")
+                VideoPlayerToplu(videoad: "squatVideo")
+                
+                Divider()
+                Spacer()
+                VStack(spacing:20){
+                    Text(SporSayfalarinString.biceps.localizede())
+                }
+                
+                
+                
+                
+                Spacer()
+                
+                NavigationLink(destination: BicepsView()) {
+                                    Buttongenel(adyaz: "Biceps")
+                }.navigationTitle("Biceps Sayfasi")
+                
             }
-            
-            
-            
-            
-            Spacer()
-            
-            Button(action:{
-                bicep = true
-                
-            }, label:{
-                Buttongenel(adyaz: "bicepDene")
-                
-            })
-            
-        }.bgNavlink(content: BicepsView(), isAction: $bicep)
+        }
     }
-}
+
