@@ -40,8 +40,8 @@ enum popins: String{
 extension UITabBar {
     static func setupAppearance() {
         let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor.white // Tab Bar arka plan rengi
+        appearance.configureWithOpaqueBackground() // Opak yapar
+        appearance.backgroundColor = UIColor.gray.withAlphaComponent(0.4) // Opaklığı ayarla (0.0 tamamen şeffaf, 1.0 tamamen opak)
         UITabBar.appearance().standardAppearance = appearance
         UITabBar.appearance().scrollEdgeAppearance = appearance
     }

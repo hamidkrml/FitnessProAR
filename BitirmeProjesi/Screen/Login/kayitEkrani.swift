@@ -15,13 +15,13 @@ struct kayitEkrani: View {
     @State var kullanciAdi = ""
     @State var sifre = ""
     var body: some View {
-        
-        VStack(spacing:25) {
+   
+        VStack(spacing:40) {
             
             ZStack{
                 Image("fitness")
                     .resizable()
-                    .frame(width: 60, height: 60) 
+                    .frame(width: 60, height: 60)
                     .cornerRadius(20)
                     .maxLeft
                 Text("ProFitness")
@@ -87,13 +87,20 @@ struct kayitEkrani: View {
                 
                 
             }
-        }   .padding(30)
-            .background(.regularMaterial)
-            .mask(RoundedRectangle(cornerRadius: 60, style: .continuous))
+        }
+        .padding(30)
+        .navigationTitle("sporlarimiz")
+        .frame(maxWidth: .infinity)
+        .background{
+            ExtractedView()
+        }
+           
             .padding(10)
         
+        Spacer()
             .bgNavlink(content: KayitOl(), isAction: $kayit)
             .bgNavlink(content: ContentView(), isAction: $anaSayfam)
+            
     }
         
 }

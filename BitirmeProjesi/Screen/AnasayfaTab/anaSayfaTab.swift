@@ -1,10 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    init() {
-        UITabBar.setupAppearance() // Ayarları burada çağırıyoruz
-    }
-   
+    
     var body: some View {
         VStack{
             TabView  {
@@ -12,27 +9,36 @@ struct ContentView: View {
                 spor()
                     .tabItem {
                         Label("Fitnes", systemImage: "figure.dance")
+                            .foregroundColor(.white)
+                            .opacity(0.8)
                     }
                 
                     Diyet()
                     .tabItem {
                         Label("Diyet", systemImage: "heart.text.clipboard.fill")
+                            .foregroundColor(.white)
+                            .opacity(0.8)
                     }
                 
                 
                 sad()
                     .tabItem {
                         Label("Level", systemImage: "slider.horizontal.2.arrow.trianglehead.counterclockwise")
+                            .foregroundColor(.white)
+                            .opacity(0.8)
                     }
                 hesapbilgileri()
                     .tabItem {
                         Label("hesap ", systemImage: "lock.fill")
+                            .foregroundColor(.white)
+                            .opacity(0.8)
                     }
-                    .tabViewStyle(.sidebarAdaptable)
+                     
             }
         }
        
-        
+        .accentColor(.white) // Aktif sekme beyaz olacak
+       .tabViewStyle(.sidebarAdaptable)
     }
 }
 

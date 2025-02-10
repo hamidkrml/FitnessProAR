@@ -1,7 +1,7 @@
 import SwiftUI
 import QuickPoseCore
 import QuickPoseSwiftUI
-
+import SwiftData
 struct Lungessol : View {
   
     
@@ -37,7 +37,7 @@ struct Lungessol : View {
                     if let result = features.values.first  {
                         let counterState = counter.count(result.value)
                         feedbackText = ("sol \(counterState.count) ")
-                        
+                       
                         
                     }
                     

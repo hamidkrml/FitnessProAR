@@ -22,13 +22,13 @@ struct spor: View {
                                 Image("fitness")
                                     .resizable()
                                     .frame(width: 300,height: 200)
-                                    .cornerRadius(10)
+                                    .cornerRadius(35)
                             }
                             NavigationLink(destination: KayitOl()){
                                 Image("fitness")
                                     .resizable()
                                     .frame(width: 350,height: 200)
-                                    .cornerRadius(10)
+                                    .cornerRadius(35)
                             }
                         }
                         .padding(.horizontal)
@@ -42,7 +42,9 @@ struct spor: View {
                             HStack(spacing: 50) {
                                 Image("squat")
                                     .resizable()
-                                    .frame(width: 110, height: 100)
+                                    .frame(width: 100, height: 100)
+                                    .offset(x:20)
+                                    .cornerRadius(30)
                                 Text("Squat ")
                                     .font(.title2)
                                     .foregroundColor(.black)
@@ -56,7 +58,9 @@ struct spor: View {
                                 
                                 Image("bicep")
                                     .resizable()
-                                    .frame(width: 110, height: 100)
+                                    .frame(width: 100, height: 100)
+                                    .offset(x:20)
+                                    .cornerRadius(30)
                                 Text("Biceps ")
                                     .font(.title2)
                                     .foregroundColor(.black)
@@ -69,6 +73,8 @@ struct spor: View {
                                 Image("lateral")
                                     .resizable()
                                     .frame(width: 100, height: 100)
+                                    .offset(x:20)
+                                    .cornerRadius(30)
                                 Text("lateral")
                                     .font(.title2)
                                     .foregroundColor(.black)
@@ -81,6 +87,8 @@ struct spor: View {
                                 Image("dumbel")
                                     .resizable()
                                     .frame(width: 100, height: 100)
+                                    .offset(x:20)
+                                    .cornerRadius(30)
                                 Text("dumbelPres")
                                     .font(.title2)
                                     .foregroundColor(.black)
@@ -94,6 +102,8 @@ struct spor: View {
                                 Image("sag")
                                     .resizable()
                                     .frame(width: 100, height: 100)
+                                    .offset(x:20)
+                                    .cornerRadius(40)
                                 Text("Lungess")
                                     .font(.title2)
                                     .foregroundColor(.black)
@@ -107,6 +117,8 @@ struct spor: View {
                                 Image("sol")
                                     .resizable()
                                     .frame(width: 100, height: 100)
+                                    .offset(x:20)
+                                    .cornerRadius(30)
                                 
                                 Text("Lungess")
                                     .font(.title2)
@@ -121,6 +133,11 @@ struct spor: View {
                 }
             }
             .navigationTitle("sporlarimiz")
+            .frame(maxWidth: .infinity)
+            .background{
+                ExtractedView()
+            }
+          //.preferredColorScheme(.dark)
         }.navHide
     }
     

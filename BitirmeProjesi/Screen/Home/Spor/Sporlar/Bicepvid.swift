@@ -27,6 +27,10 @@ struct Bicepvid: View {
                 }.navigationTitle("Biceps Sayfasi")
                 
             }
+            .frame(maxWidth: .infinity)
+            .background{
+                ExtractedView()
+            }
         }
     }
 

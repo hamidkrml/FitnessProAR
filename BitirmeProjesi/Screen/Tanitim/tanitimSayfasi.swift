@@ -118,7 +118,10 @@ struct tanitimSayfasi: View {
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
-        
+        .frame(maxWidth: .infinity)
+        .background{
+            ExtractedView()
+        }
         .bgNavlink(content: kayitEkrani(), isAction: $kayitEkran)
     }
     

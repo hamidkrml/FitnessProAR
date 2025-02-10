@@ -30,7 +30,13 @@ struct Diyet: View {
                 FramworkDetailView(framework: viewModel.selecedFramework!,  
                                    isShowingDetailView: $viewModel.isShowingDetailView)
             }
+            .frame(maxWidth: .infinity)
+            .background{
+                ExtractedView()
+            }
+           .preferredColorScheme(.dark)
         }
+        
         
     }
 }
@@ -44,6 +50,7 @@ struct FrameworkTitleView: View {
     
     var body: some View {
         VStack{
+           
             Image( framework.imageName)
                 .resizable()
                 .frame(width: 90,height: 90)
@@ -57,6 +64,7 @@ struct FrameworkTitleView: View {
             
         }
         .padding()
+        
     }
 
     
