@@ -28,6 +28,11 @@ struct Squatvid: View {
             })
             
         }.bgNavlink(content: SquatView(), isAction: $squat)
+            .frame(maxWidth: .infinity)
+            .background{
+                ExtractedView()
+            }
+            .preferredColorScheme(.dark)
     }
     
 }

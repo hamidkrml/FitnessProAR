@@ -10,6 +10,24 @@ import SwiftUI
 
 struct hesapbilgileri :View {
     var body: some View {
-        Text("kullancilarin bilgileri ve suan kadar yapdiklari işlemleri gösterilecek ve beden kitle indeksi ve")
+
+        VStack {
+            Text("kullancilarin bilgileri ve suan kadar yapdiklari işlemleri gösterilecek ve beden kitle indeksi ve")
+                .font(.customfont(font: .Bold, fontSize: 22))
+        }
+            
+            
+                .font(.customfont(font: .Bold, fontSize: 22))
+            
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+                .background{
+                    ExtractedView()
+                }
+        
+                .preferredColorScheme(.dark)
     }
+        
+}
+#Preview {
+    hesapbilgileri()
 }

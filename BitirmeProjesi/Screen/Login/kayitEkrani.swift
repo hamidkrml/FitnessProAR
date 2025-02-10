@@ -16,7 +16,7 @@ struct kayitEkrani: View {
     @State var sifre = ""
     var body: some View {
    
-        VStack(spacing:40) {
+        VStack(spacing: 25) {
             
             ZStack{
                 Image("fitness")
@@ -55,8 +55,9 @@ struct kayitEkrani: View {
                     .all15
                     .background(Color.txtBg)
                     .cornerRadius(15)
-                
+                    
             }
+            Spacer()
             HStack{
                 Button(action:{
                     anaSayfam = true
@@ -73,7 +74,7 @@ struct kayitEkrani: View {
           
             
            
-            Text("Veya")
+            
                 
             HStack{
                 Button(action:{
@@ -87,16 +88,16 @@ struct kayitEkrani: View {
                 
                 
             }
+            
         }
-        .padding(30)
+        .padding(40)
         .navigationTitle("sporlarimiz")
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
         .background{
             ExtractedView()
         }
+        .preferredColorScheme(.dark)
            
-            .padding(10)
-        
         Spacer()
             .bgNavlink(content: KayitOl(), isAction: $kayit)
             .bgNavlink(content: ContentView(), isAction: $anaSayfam)

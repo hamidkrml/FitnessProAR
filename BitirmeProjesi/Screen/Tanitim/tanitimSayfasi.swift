@@ -82,9 +82,10 @@ struct tanitimSayfasi: View {
                             .font(.customfont(font: .light, fontSize: 12))
                             .padding(.horizontal, 15)
                             .padding(.vertical, 8)
+                            .foregroundColor(.white)
                     })
                     .foregroundColor(.secondaryText)
-                    .background(Color.txtBg)
+                
                     .overlay(
                         RoundedRectangle(cornerRadius: 25.0)
                             .stroke(Color.board, lineWidth: 1)
@@ -113,15 +114,19 @@ struct tanitimSayfasi: View {
                 .cornerRadius(25)
                 .padding(.bottom, .bottomInsets + 16)
             }
+           
+            
         }
         .padding(.horizontal, 20)
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
-        .frame(maxWidth: .infinity)
+        
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
         .background{
             ExtractedView()
         }
+        .preferredColorScheme(.dark)
         .bgNavlink(content: kayitEkrani(), isAction: $kayitEkran)
     }
     

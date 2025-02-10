@@ -50,6 +50,11 @@ struct sad: View {
             }
             Spacer()
         }
+        .frame(maxWidth: .infinity)
+        .background{
+            ExtractedView()
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

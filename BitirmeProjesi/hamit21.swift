@@ -10,20 +10,15 @@ import SwiftUI
 struct hamit21: View {
     var body: some View {
        
-       
-        kayitEkrani()
-        
-        .frame(maxWidth: .infinity)
-        .background{
-            ExtractedView()
+        VStack{
+            
         }
-       .preferredColorScheme(.dark)
+        
+        
     }
 }
 
-#Preview {
-    hamit21()
-}
+
 
 struct ExtractedView: View {
     var body: some View {
@@ -33,19 +28,19 @@ struct ExtractedView: View {
             VStack {
                 
                 Circle()
-                    .fill(Color.yellow) // İç kısmı yeşil
+                    .fill(Color.yellow)
                     .scaleEffect(0.6)
                     .offset(x: 20)
                     .blur(radius: 120)
                 
                 Circle()
-                    .fill(Color.red) // İç kısmı yeşil
+                    .fill(Color.red)
                     .scaleEffect(0.6)
                     .offset(x: 20)
                     .blur(radius: 120)
                 
                 Circle()
-                    .fill(Color.yellow) // İç kısmı yeşil
+                    .fill(Color.yellow)
                     .scaleEffect(0.6)
                     .offset(x: 20)
                     .blur(radius: 120)

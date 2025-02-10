@@ -41,6 +41,11 @@ struct FramworkDetailView: View {
             }
         
         }
+        .frame(maxWidth: .infinity)
+        .background{
+            ExtractedView()
+        }
+        .preferredColorScheme(.dark)
     }
 }
 

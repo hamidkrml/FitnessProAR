@@ -40,6 +40,7 @@ struct Lsolvid: View {
             .background{
                 ExtractedView()
             }
+            .preferredColorScheme(.dark)
     }
 }
 

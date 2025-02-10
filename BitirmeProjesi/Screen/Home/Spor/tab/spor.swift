@@ -47,7 +47,7 @@ struct spor: View {
                                     .cornerRadius(30)
                                 Text("Squat ")
                                     .font(.title2)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                 
                             }
                             .maxLeft
@@ -63,7 +63,7 @@ struct spor: View {
                                     .cornerRadius(30)
                                 Text("Biceps ")
                                     .font(.title2)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                             }
                             .maxLeft
                         }
@@ -77,7 +77,7 @@ struct spor: View {
                                     .cornerRadius(30)
                                 Text("lateral")
                                     .font(.title2)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                             }
                             .maxLeft
                         }
@@ -91,7 +91,7 @@ struct spor: View {
                                     .cornerRadius(30)
                                 Text("dumbelPres")
                                     .font(.title2)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                             }
                             .maxLeft
                         }
@@ -106,7 +106,7 @@ struct spor: View {
                                     .cornerRadius(40)
                                 Text("Lungess")
                                     .font(.title2)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                             }
                             .maxLeft
                         }
@@ -122,7 +122,7 @@ struct spor: View {
                                 
                                 Text("Lungess")
                                     .font(.title2)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                 
                                 
                             }.maxLeft
@@ -137,7 +137,7 @@ struct spor: View {
             .background{
                 ExtractedView()
             }
-          //.preferredColorScheme(.dark)
+          .preferredColorScheme(.dark)
         }.navHide
     }
     

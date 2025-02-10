@@ -34,7 +34,7 @@ struct Diyet: View {
             .background{
                 ExtractedView()
             }
-           .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark)
         }
         
         
@@ -63,11 +63,13 @@ struct FrameworkTitleView: View {
             
             
         }
+        
         .padding()
         
     }
 
-    
+       
+        
 }
 
 

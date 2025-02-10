@@ -31,6 +31,7 @@ struct Bicepvid: View {
             .background{
                 ExtractedView()
             }
+            .preferredColorScheme(.dark)
         }
     }
 

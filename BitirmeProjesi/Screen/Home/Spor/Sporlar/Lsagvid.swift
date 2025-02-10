@@ -40,6 +40,7 @@ struct Lsagvid: View {
             .background{
                 ExtractedView()
             }
+            .preferredColorScheme(.dark)
         
     }
 }

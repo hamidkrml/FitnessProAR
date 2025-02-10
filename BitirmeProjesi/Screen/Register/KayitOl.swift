@@ -92,7 +92,8 @@ struct KayitOl: View {
                     
                     
                 }
-                VStack
+                .padding(30)
+            VStack
                 {
                     Button(action:{
                         
@@ -113,11 +114,15 @@ struct KayitOl: View {
            
             
         }  .padding(30)
-            .background(.regularMaterial)
-            .mask(RoundedRectangle(cornerRadius: 60, style: .continuous))
-            .padding(10)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background{
+                ExtractedView()
+            }
+        
+            .preferredColorScheme(.dark)
             
             .bgNavlink(content: BicepsView(), isAction: $hamit)
+            
     }
         
 }
