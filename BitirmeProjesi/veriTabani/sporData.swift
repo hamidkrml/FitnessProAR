@@ -10,7 +10,7 @@ import SwiftData
 
 
 @Model
-class sporData{
+class SporData{
     var squat : Int
     var biceps : Int
     var lungeSol: Int

@@ -6,17 +6,5 @@
 //
 
 import Foundation
-import SwiftData
 
-
-
-@Model
-class SquatData{
-    @Attribute var count :Int
-    
-    init(count: Int) {
-        self.count = count
-    }
-    
-}
 

@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct Bicepvid: View {
-    
+    @Environment(\.modelContext) var modelContext //
     @State var bicep = false
     
     var body: some View {
@@ -22,7 +22,8 @@ struct Bicepvid: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: BicepsView()) {
+                
+                NavigationLink(destination: BicepsView(viewModel: SporViewModel1(modelContext: modelContext))) {
                                     Buttongenel(adyaz: "Biceps")
                 }.navigationTitle("Biceps Sayfasi")
                 

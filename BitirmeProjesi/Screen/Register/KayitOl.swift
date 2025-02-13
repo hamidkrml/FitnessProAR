@@ -121,7 +121,7 @@ struct KayitOl: View {
         
             .preferredColorScheme(.dark)
             
-            .bgNavlink(content: BicepsView(), isAction: $hamit)
+         //   .bgNavlink(content: , isAction: $hamit)
             
     }
         

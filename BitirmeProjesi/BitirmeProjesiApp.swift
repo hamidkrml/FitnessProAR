@@ -17,7 +17,12 @@ struct BitirmeProjesiApp: App {
             NavigationView {
                 tanitimSayfasi()
             }
-           
+            
         }
+        .modelContainer(for: SporData.self)
+        
+    }
+    init(){
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
     }
 }
