@@ -19,7 +19,6 @@ struct BitirmeProjesiApp: App {
             }
             
         }
-        .modelContainer(for: SporData.self)
     }
 
 }

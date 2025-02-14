@@ -9,7 +9,7 @@ struct Lungessol: View {
     @State private var feedbackText: String? = nil
     @State var overlayImag: UIImage?
     @State private var counter = QuickPoseThresholdCounter()
-    @State private var lungeSolCount: Int = 0 // Sayıyı tutacak state
+    @State private var lungeSol: Int = 0 // Sayıyı tutacak state
     
     @State var scale = 1.0
     
@@ -44,13 +44,13 @@ struct Lungessol: View {
                         if let result = features.values.first {
                             let counterState = counter.count(result.value)
                             feedbackText = "Sol Lunge: \(counterState.count)"
-                            lungeSolCount = counterState.count // State'e kaydet
+                            lungeSol = counterState.count // State'e kaydet
                         }
                     }
                 )
             }
             .onDisappear {
-                saveLungeCount()
+                verikayit.saveLungeCount(lungeSolCount: lungeSol)
                 QuickPoseManager.shared.stop()
                  // Çıkarken veriyi kaydet
             }
@@ -58,16 +58,4 @@ struct Lungessol: View {
     }
     
    
-    private func saveLungeCount() {
-        let newRecord = SporData(lungeSol: lungeSolCount) // Yalnızca lungeSol'u kaydet
-        modelContext.insert(newRecord)
-        
-        do {
-            try modelContext.save() // Değişiklikleri kaydet
-            print("Lunge Sol Sayısı Kaydedildi: \(lungeSolCount)")
-            printDatabasePath()
-        } catch {
-            print("Hata: Veri kaydedilemedi! \(error.localizedDescription)")
-        }
     }
-}

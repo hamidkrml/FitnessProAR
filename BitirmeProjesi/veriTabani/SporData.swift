@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 
 @Model
-class SporData {
+final class SporData {
     var squat1: Int?
     var biceps: Int?
     var lungeSol: Int?  // Optional yapıldı

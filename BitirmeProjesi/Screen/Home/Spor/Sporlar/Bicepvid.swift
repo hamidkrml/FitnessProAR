@@ -25,10 +25,10 @@ struct Bicepvid: View {
                 Spacer()
                 
                 
-            //   / NavigationLink(destination: BicepsView())
-                //{
+              NavigationLink(destination: BicepsView())
+                {
                                     Buttongenel(adyaz: "Biceps")
-               // }.navigationTitle("Biceps Sayfasi")
+                }.navigationTitle("Biceps Sayfasi")
                 
             }
             .frame(maxWidth: .infinity)

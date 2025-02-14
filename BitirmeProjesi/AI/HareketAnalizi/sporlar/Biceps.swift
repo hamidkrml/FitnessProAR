@@ -2,15 +2,15 @@ import SwiftUI
 import QuickPoseCore
 import QuickPoseSwiftUI
 import SwiftData
-/*
+
 struct BicepsView: View {
     @Environment(\.modelContext) var modelContext
-    @Query var SporData : [sporData]
+    
 
     @State private var feedbackText: String? = nil
     @State var overlayImag: UIImage?
     @State private var counter = QuickPoseThresholdCounter()
-
+    @State private var biceps: Int = 0
     @State var scale = 1.0
 
    
@@ -48,11 +48,10 @@ struct BicepsView: View {
                         overlayImag = image
                         if let result = features.values.first {
                             let counterState = counter.count(result.value)
-                            let newCount = counterState.count
+                            biceps = counterState.count
 
-                            feedbackText = ("Biceps sayısı: \(newCount)")
-                            let hereket = sporData(biceps: counterState.count)
-                                modelContext.insert(hereket)
+                            feedbackText = ("Biceps sayısı: \(biceps)")
+                            
                             // Biceps değerini güncelle
                            
                         }
@@ -60,9 +59,10 @@ struct BicepsView: View {
                 )
             }
             .onDisappear {
+                verikayit.saveLungeCount( bicepsCount: biceps)
                 QuickPoseManager.shared.stop()
             }
         }
     }
 }
-*/
+
