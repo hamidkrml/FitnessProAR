@@ -15,6 +15,8 @@ struct Bicepvid: View {
                 Spacer()
                 VStack(spacing:20){
                     Text(SporSayfalarinString.biceps.localizede())
+                    
+
                 }
                 
                 
@@ -23,9 +25,10 @@ struct Bicepvid: View {
                 Spacer()
                 
                 
-                NavigationLink(destination: BicepsView(viewModel: SporViewModel1(modelContext: modelContext))) {
+            //   / NavigationLink(destination: BicepsView())
+                //{
                                     Buttongenel(adyaz: "Biceps")
-                }.navigationTitle("Biceps Sayfasi")
+               // }.navigationTitle("Biceps Sayfasi")
                 
             }
             .frame(maxWidth: .infinity)

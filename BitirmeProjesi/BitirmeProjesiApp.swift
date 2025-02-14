@@ -20,9 +20,6 @@ struct BitirmeProjesiApp: App {
             
         }
         .modelContainer(for: SporData.self)
-        
     }
-    init(){
-        print(URL.applicationSupportDirectory.path(percentEncoded: false))
-    }
+
 }

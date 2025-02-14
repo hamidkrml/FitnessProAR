@@ -2,21 +2,18 @@ import SwiftUI
 import QuickPoseCore
 import QuickPoseSwiftUI
 import SwiftData
-
+/*
 struct BicepsView: View {
     @Environment(\.modelContext) var modelContext
-    @StateObject private var viewModel: SporViewModel1
-    
+    @Query var SporData : [sporData]
+
     @State private var feedbackText: String? = nil
     @State var overlayImag: UIImage?
     @State private var counter = QuickPoseThresholdCounter()
-    
+
     @State var scale = 1.0
-    
-    
-    init(viewModel: SporViewModel1) {
-            _viewModel = StateObject(wrappedValue: viewModel)
-        }
+
+   
 
     var body: some View {
         GeometryReader { geometry in
@@ -35,12 +32,11 @@ struct BicepsView: View {
                             .padding(10)
                             .scaleEffect(scale)
                     }
-                    
-                   
-                    
                 }
             }
             .onAppear {
+               
+
                 let greenHighlightStyle = QuickPose.Style(conditionalColors: [
                     QuickPose.Style.ConditionalColor(min: 0.4, max: nil, color: UIColor.yellow)
                 ])
@@ -48,18 +44,17 @@ struct BicepsView: View {
                 QuickPoseManager.shared.start(
                     features: [.fitness(.bicepCurls, style: greenHighlightStyle)],
                     onFrame: { status, image, features, feedback, landmarks in
-                        
+
                         overlayImag = image
                         if let result = features.values.first {
                             let counterState = counter.count(result.value)
                             let newCount = counterState.count
-                            
+
                             feedbackText = ("Biceps sayısı: \(newCount)")
-                            
+                            let hereket = sporData(biceps: counterState.count)
+                                modelContext.insert(hereket)
                             // Biceps değerini güncelle
-                            DispatchQueue.main.async {
-                                viewModel.updateSportCount(biceps: newCount)
-                            }
+                           
                         }
                     }
                 )
@@ -70,3 +65,4 @@ struct BicepsView: View {
         }
     }
 }
+*/
