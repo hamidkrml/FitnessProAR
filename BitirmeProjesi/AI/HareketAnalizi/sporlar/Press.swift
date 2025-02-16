@@ -16,6 +16,7 @@ struct Press: View {
     @State var scale = 1.0
     @State private var coun = QuickPoseThresholdCounter()
     @State private var hadi: String? = nil
+    @State private var pres:Int = 0
     var body: some View {
     
         GeometryReader{ geometry in
@@ -45,7 +46,7 @@ struct Press: View {
                          let counterState = coun.count(result.value)
                          hadi = ("Dumbbel: \(counterState.count) ")
                          
-                         
+                         pres = counterState.count
                      }
                      
                      
@@ -60,6 +61,7 @@ struct Press: View {
              
              
              .onDisappear{
+                 verikayit.saveLungeCount(pressCount: pres)
                  QuickPoseManager.shared.stop()
              }
             

@@ -9,7 +9,7 @@ struct SquatView: View {
 @State var squatCounter = QuickPoseThresholdCounter()
 @State var overlayImage: UIImage?
 @State var count: String? = nil
-
+    @State private var squatt:Int = 0
 
 @State var scale = 1.0
 var body: some View {
@@ -41,7 +41,7 @@ var body: some View {
                 if let result = features.values.first  {
                     let counterState = squatCounter.count(result.value)
                     count = ("squat \(counterState.count) ")
-                    
+                    squatt = counterState.count
                     
                 }
                 
@@ -57,6 +57,7 @@ var body: some View {
         
         
         .onDisappear{
+            verikayit.saveLungeCount(squatCount: squatt)
             QuickPoseManager.shared.stop()
         }
         

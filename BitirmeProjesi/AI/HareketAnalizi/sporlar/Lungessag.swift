@@ -16,7 +16,7 @@ struct Lungessag : View {
     @State private var feedbackText: String? = nil
     @State var overlayImag: UIImage?
     @State private var counter = QuickPoseThresholdCounter()
-
+    @State private var lungessag : Int = 0
     @State var scale = 1.0
     var body: some View {
         GeometryReader { geometry in
@@ -44,8 +44,9 @@ struct Lungessag : View {
                     overlayImag = image
                     if let result = features.values.first  {
                         let counterState = counter.count(result.value)
-                        feedbackText = ("sag \(counterState.count) ")
                         
+                        feedbackText = ("sag \(counterState.count) ")
+                        lungessag = counterState.count
                         
                     }
                     
@@ -53,6 +54,7 @@ struct Lungessag : View {
                     
                 })
             }.onDisappear{
+                verikayit.saveLungeCount(lungeSagCount: lungessag)
                 QuickPoseManager.shared.stop()
             }
         }

@@ -16,6 +16,7 @@ struct Standing: View {
     @State var scale = 1.0
     @State private var coun = QuickPoseThresholdCounter()
     @State private var hadi: String? = nil
+    @State private var standin : Int = 0
     var body: some View {
     
         GeometryReader{ geometry in
@@ -44,7 +45,7 @@ struct Standing: View {
                      if let result = features.values.first  {
                          let counterState = coun.count(result.value)
                          hadi = ("squat \(counterState.count) ")
-                         
+                         standin = counterState.count
                          
                      }
                      
@@ -60,6 +61,7 @@ struct Standing: View {
              
              
              .onDisappear{
+                 verikayit.saveLungeCount(stadingCount: standin)
                  QuickPoseManager.shared.stop()
              }
             
