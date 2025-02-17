@@ -21,7 +21,7 @@ struct ContentView: View {
                     }
                 
                 
-                sad()
+                istatisticView()
                     .tabItem {
                         Label("Level", systemImage: "slider.horizontal.2.arrow.trianglehead.counterclockwise")
                             .foregroundColor(.white)
