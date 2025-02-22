@@ -20,9 +20,9 @@ struct hesapbilgileri :View {
                 .font(.customfont(font: .Bold, fontSize: 22))
             
                 .frame(maxWidth: .infinity,maxHeight: .infinity)
-                .background{
-                    ExtractedView()
-                }
+                .background(
+                    ExtractedView.shared
+                )
         
                 .preferredColorScheme(.dark)
     }

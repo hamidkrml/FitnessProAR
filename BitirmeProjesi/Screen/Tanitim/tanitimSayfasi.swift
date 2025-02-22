@@ -123,9 +123,9 @@ struct tanitimSayfasi: View {
         .navigationBarHidden(true)
         
         .frame(maxWidth: .infinity,maxHeight: .infinity)
-        .background{
-            ExtractedView()
-        }
+        .background(
+            ExtractedView.shared
+        )
         .preferredColorScheme(.dark)
         .bgNavlink(content: kayitEkrani(), isAction: $kayitEkran)
     }
@@ -139,4 +139,4 @@ struct tanitimSayfasi: View {
     }
         
     
-} 
+}

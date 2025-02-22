@@ -134,9 +134,9 @@ struct spor: View {
             }
             .navigationTitle("sporlarimiz")
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
           .preferredColorScheme(.dark)
         }.navHide
     }

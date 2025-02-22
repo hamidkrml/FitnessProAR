@@ -115,9 +115,9 @@ struct KayitOl: View {
             
         }  .padding(30)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
         
             .preferredColorScheme(.dark)
             

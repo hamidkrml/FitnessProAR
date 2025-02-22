@@ -7,20 +7,8 @@
 
 import SwiftUI
 
-struct hamit21: View {
-    var body: some View {
-       
-        VStack{
-            
-        }
-        
-        
-    }
-}
-
-
-
 struct ExtractedView: View {
+    static let shared = ExtractedView()
     var body: some View {
         ZStack {
             

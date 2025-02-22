@@ -93,9 +93,9 @@ struct kayitEkrani: View {
         .padding(40)
         .navigationTitle("sporlarimiz")
         .frame(maxWidth: .infinity,maxHeight: .infinity)
-        .background{
-            ExtractedView()
-        }
+        .background(
+            ExtractedView.shared
+        )
         .preferredColorScheme(.dark)
            
         Spacer()

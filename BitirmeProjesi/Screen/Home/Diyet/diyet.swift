@@ -27,13 +27,11 @@ struct Diyet: View {
             }
             .navigationTitle("Diyet")
             .sheet(isPresented: $viewModel.isShowingDetailView) {
-                FramworkDetailView(framework: viewModel.selecedFramework!,  
+                FramworkDetailView(framework: viewModel.selecedFramework!,
                                    isShowingDetailView: $viewModel.isShowingDetailView)
             }
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(ExtractedView.shared)
             .preferredColorScheme(.dark)
         }
         
