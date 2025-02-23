@@ -9,16 +9,30 @@ import SwiftUI
 
 enum DetailPage{
     
+    ///spor sayfsinda vievler
     case squat
     case bicep
     case lateral
     case dumbel
     case LungesSag
     case LungesSol
+    
+    
+    ///chart sayfasindaki  viewler
+    case level1
+    case level2
+    case level3
 }
 
 
-@ViewBuilder
+
+
+
+
+
+
+
+
 func getDetailView(for page: DetailPage) -> AnyView {
     switch page {
     case .squat:
@@ -33,5 +47,11 @@ func getDetailView(for page: DetailPage) -> AnyView {
         return AnyView(Lsagvid())
     case .LungesSol:
         return AnyView(Lsolvid())
+    case .level1:
+        return AnyView(Pressvid())
+    case .level2:
+        return AnyView(Pressvid())
+    case .level3:
+        return AnyView(Pressvid())
     }
 }

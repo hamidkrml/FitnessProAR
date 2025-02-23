@@ -6,10 +6,10 @@ struct istatisticView: View {
     @Query var records: [SporData]
     
     var body: some View {
-        let sampleData = [
-            (image: "yemek1", title: "Squat", description: "Doğru squat tekniği"),
-            (image: "yemek2", title: "Bench Press", description: "Göğüs kaslarını çalıştırır"),
-            (image: "yemek3", title: "Deadlift", description: "Tüm vücudu güçlendirir")
+        let sampleData: [(image:String,title:String,destination:DetailPage)]  = [
+            (image: "yemek1", title: "Squat",destination: .dumbel),
+            (image: "yemek2", title: "Bench Press",destination: .dumbel),
+            (image: "yemek3", title: "Deadlift",destination: .dumbel)
         ]
         let viewModel = SporChartViewModel(records: records)
         
@@ -23,7 +23,10 @@ struct istatisticView: View {
                         .foregroundColor(.white)
 
                     ForEach(sampleData, id: \.title) { item in
-                        productCard(image: item.image, title: item.title, decription: item.description)
+                        let destinatioinView = getDetailView(for: item.destination)
+                        NavigationLink(destination: destinatioinView){
+                            productCard(image: item.image, title: item.title)
+                        }
                     }
                 }
                 .navigationTitle("Level")
