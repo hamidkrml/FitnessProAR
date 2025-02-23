@@ -11,11 +11,27 @@ struct spor: View {
     let columns = [
         GridItem(.flexible())
     ]
+    
     var body: some View {
-        NavigationView{
+        
+        let sampledata: [(image:String,title:String,destination:DetailPage)] = [
+            (image :"squat",title:"Squat",destination: .squat),
+            (image :"bicep",title:"Biceps",destination: .bicep),
+            (image :"lateral",title:"Lateral",destination: .lateral),
+            (image :"dumbel",title:"DumbelPres",destination: .dumbel),
+            (image :"sag",title:"LungesSag",destination: .LungesSag),
+            (image :"sol",title:"LungesSol",destination: .LungesSol)
+        ]
+        
+        
+        
+        
+        
+        
+        NavigationStack{
             ScrollView{
-                VStack{
-                    //yatay hizalandirmak icin
+                
+                    
                     ScrollView(.horizontal,showsIndicators: false){
                         HStack(spacing:25){
                             NavigationLink(destination: KayitOl()){
@@ -35,114 +51,29 @@ struct spor: View {
                     }
                     Divider()
                     
-                    LazyVGrid(columns: columns, spacing: 25) {
+                    LazyVStack {
                         
-                        
-                        NavigationLink(destination: Squatvid()) {
-                            HStack(spacing: 50) {
-                                Image("squat")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .offset(x:20)
-                                    .cornerRadius(30)
-                                Text("Squat ")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                                
-                            }
-                            .maxLeft
-                        }
-                        
-                        NavigationLink(destination: Bicepvid()) {
-                            HStack(spacing: 50  ) {
-                                
-                                Image("bicep")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .offset(x:20)
-                                    .cornerRadius(30)
-                                Text("Biceps ")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                            }
-                            .maxLeft
-                        }
-                        NavigationLink(destination: Standingvid()) {
-                            HStack(spacing: 50) {
-                                
-                                Image("lateral")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .offset(x:20)
-                                    .cornerRadius(30)
-                                Text("lateral")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                            }
-                            .maxLeft
-                        }
-                        NavigationLink(destination: Pressvid()) {
-                            HStack(spacing: 50) {
-                                
-                                Image("dumbel")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .offset(x:20)
-                                    .cornerRadius(30)
-                                Text("dumbelPres")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                            }
-                            .maxLeft
-                        }
-                        
-                        NavigationLink(destination: Lsagvid()) {
-                            HStack(spacing: 50) {
-                                
-                                Image("sag")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .offset(x:20)
-                                    .cornerRadius(40)
-                                Text("Lungess")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                            }
-                            .maxLeft
-                        }
-                        
-                        NavigationLink(destination: Lsolvid()) {
-                            HStack(spacing: 50) {
-                                
-                                Image("sol")
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
-                                    .offset(x:20)
-                                    .cornerRadius(30)
-                                
-                                Text("Lungess")
-                                    .font(.title2)
-                                    .foregroundColor(.white)
-                                
-                                
-                            }.maxLeft
+                        ForEach(sampledata, id: \.title) { item in
+                            let destinationView = getDetailView(for: item.destination)
                             
-                                .cornerRadius(10)
+                            NavigationLink(destination: destinationView) {
+                                productCard(image: item.image, title: item.title)
                         }
-                    }
+                      }
                 }
-            }
+                    
+                }
             .navigationTitle("sporlarimiz")
             .frame(maxWidth: .infinity)
             .background(
                 ExtractedView.shared
             )
           .preferredColorScheme(.dark)
-        }.navHide
+            }
+            
+        .navHide
     }
-    
-    
-}
-#Preview {
-    spor()
-}
+    }
+//#Preview {
+//    spor()
+//}

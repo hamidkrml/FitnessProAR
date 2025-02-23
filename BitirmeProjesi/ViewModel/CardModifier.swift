@@ -12,7 +12,7 @@ struct CardModifier: ViewModifier {
         content
         
             .cornerRadius(10)
-            .shadow(color:Color.black.opacity(0.1), radius: 10, x: 0, y: 5)
+            .shadow(color:Color.yellow.opacity(0.9), radius: 10, x: 0, y: 5)
     }
 }
 
