@@ -30,6 +30,7 @@ struct kayitEkrani: View {
                 
             }
             
+            
             Text("Hesabınız varsa giriş yapın veya yeni bir hesap oluşturun")
                 .font(.customfont(font: .light, fontSize:18))
                 .multilineTextAlignment(.center)

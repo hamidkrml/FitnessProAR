@@ -34,37 +34,29 @@ enum HttpMethod : String{
 /// farkli farkli path icin tanimlayacagiz
 enum EndPoint{
     case getUsers
-    case getUserName
+ 
 }
 
 
 
 extension EndPoint:EndPointProtocol{
     var baseURL: String {
-        return "url "
+        return "https://jsonplaceholder.typicode.com"
     }
-
+    
+    
     var path: String {
-        switch self{
-        case .getUsers:
-            return ""
-        case .getUserName:
-            return ""
-        }
+        return "/users"
     }
     
     var method: HttpMethod {
         switch self {
-            
-        case .getUsers:
-            return .get
-        case .getUserName:
-            return .post
+        case .getUsers: return .get
         }
     }
     
     var headrs: [String : String]? {
-//        var header: [String:String] = ["kimlik dogrulama ":"token burasi olacak"]
+        //        var header: [String:String] = ["kimlik dogrulama ":"token burasi olacak"]
         return nil
     }
     
@@ -83,6 +75,12 @@ extension EndPoint:EndPointProtocol{
         }
         return request
     }
+
+  
     
     
-}
+        
+        
+        
+    }
+
