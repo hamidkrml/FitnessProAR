@@ -35,9 +35,9 @@ struct Standingvid: View {
         }.bgNavlink(content: Standing(), isAction: $standing)
         
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
             .preferredColorScheme(.dark)
             
      

@@ -37,9 +37,9 @@ struct Lsolvid: View {
             
         }.bgNavlink(content: Lungessol(), isAction: $sol)
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
             .preferredColorScheme(.dark)
     }
 }

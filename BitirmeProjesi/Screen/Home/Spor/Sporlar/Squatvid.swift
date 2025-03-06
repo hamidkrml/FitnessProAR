@@ -29,9 +29,9 @@ struct Squatvid: View {
             
         }.bgNavlink(content: SquatView(), isAction: $squat)
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
             .preferredColorScheme(.dark)
     }
     

@@ -37,9 +37,9 @@ struct Lsagvid: View {
             
         }.bgNavlink(content: Lungessag(), isAction: $sag)
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
             .preferredColorScheme(.dark)
         
     }

@@ -32,9 +32,9 @@ struct Bicepvid: View {
                 
             }
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
             .preferredColorScheme(.dark)
         }
     }

@@ -11,12 +11,12 @@ struct istatisticView: View {
             (image: "yemek2", title: "Bench Press",destination: .dumbel),
             (image: "yemek3", title: "Deadlift",destination: .dumbel)
         ]
-        let viewModel = SporChartViewModel(records: records)
+        
         
         NavigationStack {
             ScrollView {
                 LazyVStack {
-                    SporChartView(viewModel: viewModel)
+                    SporChartView()
 
                     Text("Aşamalar")
                         .font(.customfont(font: .Bold, fontSize: 25))

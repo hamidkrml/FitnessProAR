@@ -58,10 +58,11 @@ struct spor: View {
                             
                             NavigationLink(destination: destinationView) {
                                 productCard(image: item.image, title: item.title)
-                        }
+                                    
+                            }
                       }
                 }
-                    
+                
                 }
             .navigationTitle("sporlarimiz")
             .frame(maxWidth: .infinity)

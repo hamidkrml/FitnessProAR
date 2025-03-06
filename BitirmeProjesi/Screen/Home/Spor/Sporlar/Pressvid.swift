@@ -31,9 +31,9 @@ struct Pressvid: View {
             
         }.bgNavlink(content: Press(), isAction: $Press1)
             .frame(maxWidth: .infinity)
-            .background{
-                ExtractedView()
-            }
+            .background(
+                ExtractedView.shared
+            )
             .preferredColorScheme(.dark)
     }
 }

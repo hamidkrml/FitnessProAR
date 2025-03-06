@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030AE4AA2D305C89000847C9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 030AE4A92D305C89000847C9 /* FirebaseAuth */; };
-		03AC69C52D18438F0094E8B2 /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C42D18438F0094E8B2 /* QuickPoseCamera */; };
-		03AC69C72D18438F0094E8B2 /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C62D18438F0094E8B2 /* QuickPoseCore */; };
-		03AC69C92D18438F0094E8B2 /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69C82D18438F0094E8B2 /* QuickPoseMP */; };
-		03AC69CB2D18438F0094E8B2 /* QuickPoseSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03AC69CA2D18438F0094E8B2 /* QuickPoseSwiftUI */; };
+		03E581AB2D724AB2004CB9F4 /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AA2D724AB2004CB9F4 /* QuickPoseCamera */; };
+		03E581AD2D724AB2004CB9F4 /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AC2D724AB2004CB9F4 /* QuickPoseCore */; };
+		03E581AF2D724AB2004CB9F4 /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AE2D724AB2004CB9F4 /* QuickPoseMP */; };
+		03E581B12D724AB2004CB9F4 /* QuickPoseSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581B02D724AB2004CB9F4 /* QuickPoseSwiftUI */; };
+		03E581B42D724B41004CB9F4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581B32D724B41004CB9F4 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,11 +57,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03AC69C72D18438F0094E8B2 /* QuickPoseCore in Frameworks */,
-				030AE4AA2D305C89000847C9 /* FirebaseAuth in Frameworks */,
-				03AC69C92D18438F0094E8B2 /* QuickPoseMP in Frameworks */,
-				03AC69C52D18438F0094E8B2 /* QuickPoseCamera in Frameworks */,
-				03AC69CB2D18438F0094E8B2 /* QuickPoseSwiftUI in Frameworks */,
+				03E581AD2D724AB2004CB9F4 /* QuickPoseCore in Frameworks */,
+				03E581B42D724B41004CB9F4 /* FirebaseAuth in Frameworks */,
+				03E581AF2D724AB2004CB9F4 /* QuickPoseMP in Frameworks */,
+				03E581AB2D724AB2004CB9F4 /* QuickPoseCamera in Frameworks */,
+				03E581B12D724AB2004CB9F4 /* QuickPoseSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +113,11 @@
 			);
 			name = BitirmeProjesi;
 			packageProductDependencies = (
-				03AC69C42D18438F0094E8B2 /* QuickPoseCamera */,
-				03AC69C62D18438F0094E8B2 /* QuickPoseCore */,
-				03AC69C82D18438F0094E8B2 /* QuickPoseMP */,
-				03AC69CA2D18438F0094E8B2 /* QuickPoseSwiftUI */,
-				030AE4A92D305C89000847C9 /* FirebaseAuth */,
+				03E581AA2D724AB2004CB9F4 /* QuickPoseCamera */,
+				03E581AC2D724AB2004CB9F4 /* QuickPoseCore */,
+				03E581AE2D724AB2004CB9F4 /* QuickPoseMP */,
+				03E581B02D724AB2004CB9F4 /* QuickPoseSwiftUI */,
+				03E581B32D724B41004CB9F4 /* FirebaseAuth */,
 			);
 			productName = BitirmeProjesi;
 			productReference = 03092BB92CF872CC00410E27 /* BitirmeProjesi.app */;
@@ -148,8 +148,8 @@
 			mainGroup = 03092BB02CF872CC00410E27;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */,
-				030AE4A82D305C89000847C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				03E581A92D724AB2004CB9F4 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */,
+				03E581B22D724B41004CB9F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 03092BBA2CF872CC00410E27 /* Products */;
@@ -313,7 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BitirmeProjesi/Preview Content\"";
-				DEVELOPMENT_TEAM = L7F6X2DV8Y;
+				DEVELOPMENT_TEAM = DTVA7UKM7F;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -350,7 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BitirmeProjesi/Preview Content\"";
-				DEVELOPMENT_TEAM = L7F6X2DV8Y;
+				DEVELOPMENT_TEAM = DTVA7UKM7F;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -401,15 +401,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		030AE4A82D305C89000847C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.6.0;
-			};
-		};
-		03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */ = {
+		03E581A92D724AB2004CB9F4 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quickpose/quickpose-ios-sdk.git";
 			requirement = {
@@ -417,33 +409,41 @@
 				kind = branch;
 			};
 		};
+		03E581B22D724B41004CB9F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		030AE4A92D305C89000847C9 /* FirebaseAuth */ = {
+		03E581AA2D724AB2004CB9F4 /* QuickPoseCamera */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 030AE4A82D305C89000847C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		03AC69C42D18438F0094E8B2 /* QuickPoseCamera */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			package = 03E581A92D724AB2004CB9F4 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
 			productName = QuickPoseCamera;
 		};
-		03AC69C62D18438F0094E8B2 /* QuickPoseCore */ = {
+		03E581AC2D724AB2004CB9F4 /* QuickPoseCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			package = 03E581A92D724AB2004CB9F4 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
 			productName = QuickPoseCore;
 		};
-		03AC69C82D18438F0094E8B2 /* QuickPoseMP */ = {
+		03E581AE2D724AB2004CB9F4 /* QuickPoseMP */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			package = 03E581A92D724AB2004CB9F4 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
 			productName = QuickPoseMP;
 		};
-		03AC69CA2D18438F0094E8B2 /* QuickPoseSwiftUI */ = {
+		03E581B02D724AB2004CB9F4 /* QuickPoseSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03AC69C32D18438F0094E8B2 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			package = 03E581A92D724AB2004CB9F4 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
 			productName = QuickPoseSwiftUI;
+		};
+		03E581B32D724B41004CB9F4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03E581B22D724B41004CB9F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

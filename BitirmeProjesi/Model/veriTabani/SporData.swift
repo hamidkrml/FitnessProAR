@@ -10,6 +10,8 @@ final class SporData {
     var press: Int?
     var standing: Int?
 
+    // İlk baştaki hali
+  
     init(squat: Int? = nil, biceps: Int? = nil, lungeSol: Int? = nil, lungeSag: Int? = nil, press: Int? = nil, standing: Int? = nil) {
         self.squat1 = squat
         self.biceps = biceps
@@ -17,5 +19,6 @@ final class SporData {
         self.lungeSag = lungeSag
         self.press = press
         self.standing = standing
+       
     }
 }
