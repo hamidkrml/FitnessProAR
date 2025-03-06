@@ -40,7 +40,7 @@ struct productCard: View {
                 Spacer()
             }
             
-                        .background(Color.white.opacity(0.5))
+                        .background(Color.white.opacity(0.2))
             .modifier(CardModifier())
             .padding(.all, 20)
         }
