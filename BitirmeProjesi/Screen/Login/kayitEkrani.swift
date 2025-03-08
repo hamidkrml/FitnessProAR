@@ -14,95 +14,38 @@ struct kayitEkrani: View {
     @State var anaSayfam = false
     @State var kullanciAdi = ""
     @State var sifre = ""
+//    @FocusState private var focusedField: fieldKeybord?
+    
+    enum fieldKeybord{
+        case KullaniciAdi
+        case Sifre
+    }
     var body: some View {
-   
-        VStack(spacing: 25) {
+        ScrollView{
+            VStack(spacing: 20){
             
-            ZStack{
-                Image("fitness")
-                    .resizable()
-                    .frame(width: 60, height: 60)
-                    .cornerRadius(20)
-                    .maxLeft
-                Text("ProFitness")
-                    .font(.customfont(font: .semiBold, fontSize: 25))
-                    .maxConter
-                
-            }
-            
-            
-            Text("Hesabınız varsa giriş yapın veya yeni bir hesap oluşturun")
-                .font(.customfont(font: .light, fontSize:18))
-                .multilineTextAlignment(.center)
-                .padding(.bottom,15)
-            
-            HStack {
-                VStack {
-                    Text("KullanciAdi")
+                HStack(alignment: .top){
+                    Image("fitness")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150,height: 100)
                         .maxLeft
-                        .font(.customfont(font: .light, fontSize: 13))
-                    TextField("KullanciAdi" ,text: $kullanciAdi)
-                        .all15
-                        .background(Color.txtBg)
-                        .cornerRadius(15)
-                        .bottom15
                 }
-            }
-            VStack {
-                Text("Sifre")
-                    .maxLeft
-                    .font(.customfont(font: .light, fontSize: 13))
-                SecureField("SifreniziGirin" ,text: $sifre)
-                    .all15
-                    .background(Color.txtBg)
-                    .cornerRadius(15)
                     
             }
-            Spacer()
-            HStack{
-                Button(action:{
-                    anaSayfam = true
-                    
-                }, label:{
-                    Buttongenel(adyaz: "GirisYap")
-                        
-                    
-                })
-                
-                
-               
-            }
-          
-            
-           
-            
-                
-            HStack{
-                Button(action:{
-                    kayit = true
-                    
-                    
-                }, label:{
-                    Buttongenel(adyaz: "KayitOl")
-                    
-                })
-                
-                
-            }
-            
         }
-        .padding(40)
-        .navigationTitle("sporlarimiz")
-        .frame(maxWidth: .infinity,maxHeight: .infinity)
-        .background(
-            ExtractedView.shared
-        )
-        .preferredColorScheme(.dark)
-           
-        Spacer()
+        
+            .frame(maxWidth: .infinity,maxHeight: .infinity)
+            .background(
+                ExtractedView.shared
+            )
+            .preferredColorScheme(.dark)
+            
+        
+
             .bgNavlink(content: KayitOl(), isAction: $kayit)
             .bgNavlink(content: ContentView(), isAction: $anaSayfam)
-            
+            .scrollDismissesKeyboard(.automatic)
     }
         
 }
@@ -114,3 +57,6 @@ struct kayitEkrani: View {
     }
     
 }
+
+
+

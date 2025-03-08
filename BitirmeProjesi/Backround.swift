@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExtractedView: View {
     static let shared = ExtractedView()
+    private init() {}
     var body: some View {
         ZStack {
             

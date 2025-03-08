@@ -32,8 +32,8 @@ struct verikayit {
         
         do {
             try modelContext.save()
-            print("Lunge Sol Sayısı Kaydedildi: \(lungeSolCount), Biceps Sayısı Kaydedildi: \(bicepsCount): Squat Sayısı Kaydedildi: \(squatCount), Lunge Sağ Sayısı Kaydedildi: \(lungeSagCount), Stading Sayısı Kaydedildi: \(stadingCount), Press Sayısı Kaydedildi: \(pressCount)")
-            
+//            print("Lunge Sol Sayısı Kaydedildi: \(lungeSolCount), Biceps Sayısı Kaydedildi: \(bicepsCount): Squat Sayısı Kaydedildi: \(squatCount), Lunge Sağ Sayısı Kaydedildi: \(lungeSagCount), Stading Sayısı Kaydedildi: \(stadingCount), Press Sayısı Kaydedildi: \(pressCount)")
+//            
             
         } catch {
             print("Hata: Veri kaydedilemedi! \(error.localizedDescription)")

@@ -26,6 +26,7 @@ struct tanitimSayfasi: View {
         ]
     ]
     
+   
     var body: some View {
         ZStack(alignment: .center) {
             // TabView sayfalari kaydirarak gezebilmesi icin
