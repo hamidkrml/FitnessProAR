@@ -124,7 +124,7 @@ struct tanitimSayfasi: View {
                 switch result{
                 case .success(let success):
                     success.forEach{ user in
-                        print(user.name ?? "hamit")
+                        print(user.username ?? "hamit")
                     }
                 case .failure(let failure):
                     print(failure.localizedDescription)

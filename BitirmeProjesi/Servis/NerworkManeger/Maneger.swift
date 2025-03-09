@@ -46,4 +46,8 @@ class NetworkMeneger {
         let endpoint = EndPoint.getUsers
         request(endpoint, completion: completion)
     }
+    func getcomments(postId:String,completion: @escaping(Result<User, Error>)->Void){
+        let endpoint = EndPoint.comments(postID: postId)
+        request(endpoint, completion: completion)
+    }
 }

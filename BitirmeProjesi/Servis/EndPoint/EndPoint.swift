@@ -34,7 +34,7 @@ enum HttpMethod : String{
 /// farkli farkli path icin tanimlayacagiz
 enum EndPoint{
     case getUsers
- 
+    case comments(postID:String)
 }
 
 
@@ -52,11 +52,13 @@ extension EndPoint:EndPointProtocol{
     var method: HttpMethod {
         switch self {
         case .getUsers: return .get
+        case .comments: return .get
+            
         }
     }
     
     var headrs: [String : String]? {
-        //        var header: [String:String] = ["kimlik dogrulama ":"token burasi olacak"]
+//                var header: [String:String] = ["kimlik dogrulama ":"\(token)token burasi olacak"]
         return nil
     }
     
@@ -65,6 +67,10 @@ extension EndPoint:EndPointProtocol{
             fatalError("Eror 404")
             
         }
+        if case .comments(let id) = self{
+            commpents.queryItems = [URLQueryItem(name: "postid", value: id)]
+        }
+        
         commpents.path = path
         var request  = URLRequest(url: commpents.url!)
         request.httpMethod = method.rawValue
