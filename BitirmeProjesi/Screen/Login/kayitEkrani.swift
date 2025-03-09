@@ -22,16 +22,45 @@ struct kayitEkrani: View {
     }
     var body: some View {
         ScrollView{
-            VStack(spacing: 20){
-            
-                HStack(alignment: .top){
+            VStack(spacing: 50){
+                
+                HStack(){
                     Image("fitness")
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 150,height: 100)
-                        .maxLeft
+                        .frame(width: 100,height: 100)
+                        .clipShape(Circle())
+
+                        .padding()
+                    Text("Hoş Geldiniz")
+                        .font(.largeTitle)
+                        .italic()
+                        .foregroundStyle(.white)
+                        .lineSpacing(15)
+                        .shadow(color:.gray,radius: 2,x: 2,y:2)
                 }
+                .maxLeft
+                .top15
+                Spacer()
+                VStack(spacing: 60){
+                    TextField("Kullanci Adin",text: $kullanciAdi)
+                        .padding()
+                        .background(Color.white.opacity(0.2))
+                        .foregroundColor(.red)
+                        .cornerRadius(20, corner: .allCorners)
+                        
                     
+                    SecureField("Şifrenizi Giriniz", text: $sifre)
+                        .padding()
+                        .background(Color.white.opacity(0.2))
+                        .cornerRadius(20, corner: .allCorners)
+                        .foregroundColor(.black)
+                }
+                .padding(.horizontal,20)
+                
+                .padding()
+                NavigationLink(destination: ContentView()){
+                    Buttongenel(adyaz: "Giriş Yap")
+                }
             }
         }
         
