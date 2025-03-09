@@ -18,10 +18,11 @@ struct BitirmeProjesiApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                tanitimSayfasi()
+                GirisVeyaAtla()
             }
             // modelContext'i view environment'ına ekliyoruz.
             .modelContext(modelContainer.mainContext)
+            .environmentObject(registerViewModel())
         }
     }
 }

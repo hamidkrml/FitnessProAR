@@ -84,7 +84,7 @@ struct kayitEkrani: View {
             .scrollDismissesKeyboard(.automatic)
         }
         
-        .navHideWithout
+        .navHide
     }
         
 }

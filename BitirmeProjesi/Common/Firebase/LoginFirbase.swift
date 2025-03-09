@@ -20,7 +20,10 @@ class LoginFirbase{
     
     func login(email:String, password:String)async throws{}
     
-    func createUser(email:String,password:String)async throws{}
+    func createUser(email:String,password:String)async throws{
+        print("kullanci mail\(email)")
+        print("kullanci mail\(password)")
+    }
     
     func loadUserData()async throws{}
     

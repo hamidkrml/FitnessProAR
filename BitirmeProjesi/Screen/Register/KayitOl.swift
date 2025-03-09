@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct KayitOl: View {
-    @State  var ad:String=""
-    @State  var soyad:String=""
-    @State  var kullanciad:String=""
-    @State  var gmail:String = ""
-    @State  var boy :String  = ""
-    @State  var ceki :String = ""
+
     @State var hamit = false
-    
+    @EnvironmentObject var viewModel:registerViewModel
     var body: some View {
      
         
@@ -46,13 +41,13 @@ struct KayitOl: View {
                 HStack{
                     VStack{
                         textal(label1: "Ad")
-                        textfiealdal(label2: "AdinizGirin", text: $ad)
+                        textfiealdal(label2: "AdinizGirin", text: $viewModel.ad)
                       
                     }
                     
                     VStack{
                         textal(label1: "SoyAd")
-                        textfiealdal(label2: "SoyAdiniziGirin", text: $soyad)
+                        textfiealdal(label2: "SoyAdiniziGirin", text: $viewModel.soyad)
                         
                     }
                     
@@ -63,29 +58,29 @@ struct KayitOl: View {
                    
                     VStack{
                         textal(label1: "KullanciAdi")
-                        textfiealdal(label2: "KullanciAdinizigirin", text: $kullanciad)
+                        textfiealdal(label2: "KullanciAdinizigirin", text: $viewModel.kullanciad)
                     }
                     
                     VStack{
                         textal(label1: "Gmail")
-                        textfiealdal(label2: "GmalinizGiriniz", text: $gmail)
+                        textfiealdal(label2: "GmalinizGiriniz", text: $viewModel.gmail)
             
                 }
                 
                 VStack{
                     textal(label1: "sifrenizi giriniz")
-                    textfiealdal(label2: "sifreniz", text: $ceki)                }
+                    textfiealdal(label2: "sifreniz", text: $viewModel.ceki)                }
                     
                 
                 HStack{
                     VStack{
                         textal(label1: "Boy giriniz")
-                        textfiealdal(label2: "Boyunuz giriniz", text: $boy)
+                        textfiealdal(label2: "Boyunuz giriniz", text: $viewModel.boy)
                     }
                     
                     VStack{
                         textal(label1: "ceki giriniz")
-                        textfiealdal(label2: "cekinizi giriniz", text: $ceki)
+                        textfiealdal(label2: "cekinizi giriniz", text: $viewModel.ceki)
                     }
                     
                     
@@ -97,7 +92,7 @@ struct KayitOl: View {
                 {
                     Button(action:{
                         
-                        hamit = true
+                        Task{try await viewModel.CreateUser()}
                         
                     }, label:{
                         Buttongenel(adyaz: "Kayitol")

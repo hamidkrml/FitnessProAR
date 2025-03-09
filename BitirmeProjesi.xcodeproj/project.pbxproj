@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0347B8192D7E05AA00B9173C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0347B8182D7E05AA00B9173C /* FirebaseCore */; };
 		03E581AB2D724AB2004CB9F4 /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AA2D724AB2004CB9F4 /* QuickPoseCamera */; };
 		03E581AD2D724AB2004CB9F4 /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AC2D724AB2004CB9F4 /* QuickPoseCore */; };
 		03E581AF2D724AB2004CB9F4 /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AE2D724AB2004CB9F4 /* QuickPoseMP */; };
@@ -61,6 +62,7 @@
 				03E581B42D724B41004CB9F4 /* FirebaseAuth in Frameworks */,
 				03E581AF2D724AB2004CB9F4 /* QuickPoseMP in Frameworks */,
 				03E581AB2D724AB2004CB9F4 /* QuickPoseCamera in Frameworks */,
+				0347B8192D7E05AA00B9173C /* FirebaseCore in Frameworks */,
 				03E581B12D724AB2004CB9F4 /* QuickPoseSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +120,7 @@
 				03E581AE2D724AB2004CB9F4 /* QuickPoseMP */,
 				03E581B02D724AB2004CB9F4 /* QuickPoseSwiftUI */,
 				03E581B32D724B41004CB9F4 /* FirebaseAuth */,
+				0347B8182D7E05AA00B9173C /* FirebaseCore */,
 			);
 			productName = BitirmeProjesi;
 			productReference = 03092BB92CF872CC00410E27 /* BitirmeProjesi.app */;
@@ -420,6 +423,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0347B8182D7E05AA00B9173C /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03E581B22D724B41004CB9F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
 		03E581AA2D724AB2004CB9F4 /* QuickPoseCamera */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 03E581A92D724AB2004CB9F4 /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
