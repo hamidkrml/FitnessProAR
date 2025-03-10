@@ -28,7 +28,7 @@ struct spor: View {
         
         
         
-        NavigationStack{
+        NavigationView{
             ScrollView{
                 
                     
@@ -65,7 +65,7 @@ struct spor: View {
                 
                 }
             .navigationTitle("sporlarimiz")
-            .frame(maxWidth: .infinity)
+           
             .background(
                 ExtractedView.shared
             )

@@ -11,6 +11,7 @@ struct GirisVeyaAtla: View {
     @StateObject var viewModel = FirbaseViewModel()
     @StateObject var registerViewModel1 = registerViewModel()
     var body: some View {
+        
         Group{
             if  viewModel.user1 == nil{
                 tanitimSayfasi()

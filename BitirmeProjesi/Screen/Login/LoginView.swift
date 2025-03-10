@@ -71,7 +71,7 @@ struct kayitEkrani: View {
                     }
                 }
             }
-            .ignoresSafeArea(.keyboard,edges: .bottom)
+           
             .frame(maxWidth: .infinity,maxHeight: .infinity)
             .background(
                 ExtractedView.shared
@@ -84,7 +84,7 @@ struct kayitEkrani: View {
             .scrollDismissesKeyboard(.automatic)
         }
         
-        .navHide
+        
     }
         
 }
