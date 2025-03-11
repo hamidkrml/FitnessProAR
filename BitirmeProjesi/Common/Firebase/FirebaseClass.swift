@@ -13,7 +13,7 @@ import Combine
 
 class FirbaseViewModel:ObservableObject{
     private let service = LoginFirbase.shared
-    private let cancellables = Set<AnyCancellable>()
+    private var cancellables = Set<AnyCancellable>()
     @Published var user1:FirebaseAuth.User?
     
     init(){
@@ -21,8 +21,10 @@ class FirbaseViewModel:ObservableObject{
     }
     
     func setupSubscibers(){
-        service.$user.sink{[weak self] user in
-            self?.user1 = user}
+        service.$user1.sink{[weak self] user1 in
+            self?.user1 = user1
+        }
+        .store(in: &cancellables)
     }
         
 }

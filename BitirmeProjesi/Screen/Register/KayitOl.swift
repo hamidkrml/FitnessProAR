@@ -15,6 +15,7 @@ struct KayitOl: View {
     var body: some View {
         NavigationView{
             ScrollView{
+           
                 VStack(spacing:35){
                     
                     HStack{
@@ -80,17 +81,25 @@ struct KayitOl: View {
                     } label: {
                         Buttongenel(adyaz: "KayitOl")
                     }
-
+                    Spacer()
                 }
                 .padding(.horizontal,20)
+                
+                
             }
+            
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
                 ExtractedView.shared
             )
+                        
+                        .preferredColorScheme(.dark)
+        }
+        /*
+         */ // Navigation bar kapalı
         
-            .preferredColorScheme(.dark)
-        }.navHide
+        .navHideWithout
+        .ignoresSafeArea(.keyboard, edges: .bottom)
         
             
             
@@ -103,6 +112,7 @@ struct KayitOl: View {
 #Preview {
     NavigationStack{
         KayitOl()
-//            .environmentObject(<#T##T#>)
+            
+            .environmentObject(registerViewModel())
     }
 }
