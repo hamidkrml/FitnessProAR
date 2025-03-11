@@ -28,7 +28,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .opacity(0.8)
                     }
-                hesapbilgileri()
+                ProfilSayfasi()
                     .tabItem {
                         Label("hesap ", systemImage: "lock.fill")
                             .foregroundColor(.white)
