@@ -10,11 +10,12 @@ import SwiftUI
 struct KayitOl: View {
 
     @State var hamit = false
+    @State var ad :String = ""
     @EnvironmentObject var viewModel:registerViewModel
     var body: some View {
-        NavigationStack{
+        NavigationView{
             ScrollView{
-                VStack(spacing:20){
+                VStack(spacing:35){
                     
                     HStack{
                         Image("fitness")
@@ -32,14 +33,56 @@ struct KayitOl: View {
                     .maxLeft
                     .top8
                     Spacer()
-                    VStack(spacing: 20){
+                    HStack(spacing: 20){
                         TextField("Ad", text: $viewModel.ad)
+                            .padding()
                             .background(Color.white.opacity(0.2))
-                            .foregroundColor(.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(20, corner: .allCorners)
+                        
+                        TextField("SoyAd", text: $viewModel.soyad)
+                            .padding()
+                            .background(Color.white.opacity(0.2))
+                            .foregroundColor(.white)
                             .cornerRadius(20, corner: .allCorners)
                     }
                     
+                    
+                    VStack(spacing: 30){
+                        TextField("Gmail", text: $viewModel.gmail)
+                            .padding()
+                            .background(Color.white.opacity(0.2))
+                            .foregroundColor(.white)
+                            .cornerRadius(20, corner: .allCorners)
+                        
+                        SecureField("Şifre",text: $viewModel.Sifre)
+                            .padding()
+                            .background(Color.white.opacity(0.2))
+                            .foregroundColor(.white)
+                            .cornerRadius(20, corner: .allCorners)
+                    }
+                    HStack(spacing: 20){
+                        TextField("Boy", text: $viewModel.boy)
+                            .padding()
+                            .background(Color.white.opacity(0.2))
+                            .foregroundColor(.white)
+                            .cornerRadius(20, corner: .allCorners)
+                        
+                        TextField("Ceki", text: $viewModel.ceki)
+                            .padding()
+                            .background(Color.white.opacity(0.2))
+                            .foregroundColor(.white)
+                            .cornerRadius(20, corner: .allCorners)
+                    }
+                    Spacer()
+                    Button {
+                        Task{try await viewModel.CreateUser()}
+                    } label: {
+                        Buttongenel(adyaz: "KayitOl")
+                    }
+
                 }
+                .padding(.horizontal,20)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
@@ -47,7 +90,7 @@ struct KayitOl: View {
             )
         
             .preferredColorScheme(.dark)
-        }
+        }.navHide
         
             
             
@@ -60,5 +103,6 @@ struct KayitOl: View {
 #Preview {
     NavigationStack{
         KayitOl()
+//            .environmentObject(<#T##T#>)
     }
 }

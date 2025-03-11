@@ -11,13 +11,13 @@ class registerViewModel :ObservableObject{
     
     @Published var ad:String = ""
     @Published var soyad:String = ""
-    @Published var kullanciad:String = ""
+    @Published var Sifre:String = ""
     @Published var gmail:String = ""
     @Published var boy:String = ""
     @Published var ceki:String = ""
   
     func CreateUser()async throws{
-        try await LoginFirbase.shared.createUser(email: gmail, password: kullanciad)
+        try await LoginFirbase.shared.createUser(email: gmail, password: Sifre)
     }
     
 }

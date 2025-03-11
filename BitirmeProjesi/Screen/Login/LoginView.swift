@@ -12,7 +12,7 @@ struct kayitEkrani: View {
 //@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     @State var kullanciAdi = ""
-    @State var sifre = ""
+    @State var sifre1 = ""
 //    @FocusState private var focusedField: fieldKeybord?
     
     enum fieldKeybord{
@@ -49,7 +49,7 @@ struct kayitEkrani: View {
                             .cornerRadius(20, corner: .allCorners)
                         
                         
-                        SecureField("Şifrenizi Giriniz", text: $sifre)
+                        SecureField("Şifrenizi Giriniz", text: $sifre1)
                             .padding()
                             .background(Color.white.opacity(0.2))
                             .cornerRadius(20, corner: .allCorners)
