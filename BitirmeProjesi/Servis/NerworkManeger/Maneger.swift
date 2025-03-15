@@ -42,7 +42,7 @@ class NetworkMeneger {
         
         task.resume()
     }
-    func getuser(completion: @escaping(Result<User, Error>)->Void){
+    func getuser(completion: @escaping(Result<User11, Error>)->Void){
         let endpoint = EndPoint.getUsers
         request(endpoint, completion: completion)
     }

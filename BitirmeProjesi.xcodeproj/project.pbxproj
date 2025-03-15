@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0347B8192D7E05AA00B9173C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0347B8182D7E05AA00B9173C /* FirebaseCore */; };
+		03AA42582D85CFB8000091CA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 03AA42572D85CFB8000091CA /* FirebaseFirestore */; };
+		03AA425C2D85D755000091CA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 03AA425B2D85D755000091CA /* FirebaseStorage */; };
 		03E581AB2D724AB2004CB9F4 /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AA2D724AB2004CB9F4 /* QuickPoseCamera */; };
 		03E581AD2D724AB2004CB9F4 /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AC2D724AB2004CB9F4 /* QuickPoseCore */; };
 		03E581AF2D724AB2004CB9F4 /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 03E581AE2D724AB2004CB9F4 /* QuickPoseMP */; };
@@ -63,7 +65,9 @@
 				03E581AF2D724AB2004CB9F4 /* QuickPoseMP in Frameworks */,
 				03E581AB2D724AB2004CB9F4 /* QuickPoseCamera in Frameworks */,
 				0347B8192D7E05AA00B9173C /* FirebaseCore in Frameworks */,
+				03AA425C2D85D755000091CA /* FirebaseStorage in Frameworks */,
 				03E581B12D724AB2004CB9F4 /* QuickPoseSwiftUI in Frameworks */,
+				03AA42582D85CFB8000091CA /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +125,8 @@
 				03E581B02D724AB2004CB9F4 /* QuickPoseSwiftUI */,
 				03E581B32D724B41004CB9F4 /* FirebaseAuth */,
 				0347B8182D7E05AA00B9173C /* FirebaseCore */,
+				03AA42572D85CFB8000091CA /* FirebaseFirestore */,
+				03AA425B2D85D755000091CA /* FirebaseStorage */,
 			);
 			productName = BitirmeProjesi;
 			productReference = 03092BB92CF872CC00410E27 /* BitirmeProjesi.app */;
@@ -427,6 +433,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 03E581B22D724B41004CB9F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCore;
+		};
+		03AA42572D85CFB8000091CA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03E581B22D724B41004CB9F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		03AA425B2D85D755000091CA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03E581B22D724B41004CB9F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 		03E581AA2D724AB2004CB9F4 /* QuickPoseCamera */ = {
 			isa = XCSwiftPackageProductDependency;

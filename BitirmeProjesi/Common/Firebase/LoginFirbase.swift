@@ -6,8 +6,8 @@
 //
 import Foundation
 import FirebaseAuth
-import SwiftUI
-
+import Firebase
+import FirebaseFirestore
 class LoginFirbase{
 
     @Published var user1: FirebaseAuth.User?
@@ -26,18 +26,25 @@ class LoginFirbase{
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.user1 = result.user
         }catch{
-            let hata = Text("Kullanci adiniz Veya sifreniz yanlisdir\(error.localizedDescription)")
+//            let hata = Text("Kullanci adiniz Veya sifreniz yanlisdir\(error.localizedDescription)")
         }
         
     }
     
-    func createUser(email:String,password:String)async throws{
+    func createUser(email:String,password:String,Kboyu:String,Kceki:String,Kad:String,Ksoyad:String)async throws{
         do{
             let resut = try await Auth.auth().createUser(withEmail: email, password: password)
             self.user1 = resut.user
+            await uploadUserData(uid: resut.user.uid,Kboyu: Kboyu,Kceki: Kceki,Kad: Kad,Ksoyad: Ksoyad)
         }catch{
             print("hata\(error.localizedDescription)")
         }
+    }
+    
+    func uploadUserData(uid:String,Kboyu:String,Kceki:String,Kad:String,Ksoyad:String)async{
+        let user = User(id: uid,ad: Kad,soyad: Ksoyad,boy: Kboyu, ceki: Kboyu)
+        guard let encodedUser = try? Firestore.Encoder().encode(user) else{return}
+        try? await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
     }
     
     func loadUserData()async throws{}

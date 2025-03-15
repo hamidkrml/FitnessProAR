@@ -11,4 +11,4 @@ struct UserElement: Codable {
     let ru: String?
 }
 
-typealias User = [UserElement]
+typealias User11 = [UserElement]
