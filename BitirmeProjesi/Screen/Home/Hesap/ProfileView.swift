@@ -4,9 +4,7 @@
 //
 //  Created by hamid on 10.01.25.
 //
-import SwiftUI
-import PhotosUI
-import SwiftUI
+
 import PhotosUI
 import SwiftUI
 import PhotosUI
@@ -25,14 +23,14 @@ struct ProfileView: View {
                 image
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 120, height: 120)
                     .clipShape(Circle())
                     .overlay(Circle().stroke(Color.blue, lineWidth: 4))
                     .shadow(radius: 10)
             } else {
                 Circle()
                     .fill(Color.gray.opacity(0.5))
-                    .frame(width: 150, height: 150)
+                    .frame(width: 120, height: 120)
                     .overlay(Text("Fotoğraf Ekle").foregroundColor(.white))
             }
         }

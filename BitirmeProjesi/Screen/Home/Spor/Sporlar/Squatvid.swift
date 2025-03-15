@@ -15,7 +15,20 @@ struct Squatvid: View {
             }
             
             
-            
+//            .onAppear{
+//                NetworkMeneger.shared.getuser{ result in
+//                    switch result{
+//                    case .success(let success):
+//                        success.forEach{ User in
+//                            
+//                            print(User.az?.description ?? "hamit")
+//                        }
+//                    case .failure(let failure):
+//                        print(failure.localizedDescription)
+//                    }
+//                }
+//                
+//            }
             
             Spacer()
             

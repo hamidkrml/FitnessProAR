@@ -11,10 +11,10 @@ import SwiftUI
 struct kayitEkrani: View {
 //@UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
-    @State var kullanciAdi = ""
-    @State var sifre1 = ""
-//    @FocusState private var focusedField: fieldKeybord?
+    @StateObject var viewModel = LoginViewModel()
     
+    @State private var errorMessage: String? = nil
+
     enum fieldKeybord{
         case KullaniciAdi
         case Sifre
@@ -42,14 +42,14 @@ struct kayitEkrani: View {
                     .top15
                     Spacer()
                     VStack(spacing: 60){
-                        TextField("Kullanci Adin",text: $kullanciAdi)
+                        TextField("Kullanci Adin",text: $viewModel.email)
                             .padding()
                             .background(Color.white.opacity(0.2))
                             .foregroundColor(.red)
                             .cornerRadius(20, corner: .allCorners)
                         
                         
-                        SecureField("Şifrenizi Giriniz", text: $sifre1)
+                        SecureField("Şifrenizi Giriniz", text: $viewModel.password)
                             .padding()
                             .background(Color.white.opacity(0.2))
                             .cornerRadius(20, corner: .allCorners)
@@ -58,9 +58,14 @@ struct kayitEkrani: View {
                     .padding(.horizontal,20)
                     
                     .padding()
-                    NavigationLink(destination: ContentView()){
-                        Buttongenel(adyaz: "Giriş Yap")
+                  
+                   
+                    
+                    Button {Task{ try await viewModel.signIn()}
+                    } label: {
+                        Buttongenel(adyaz: "Giris Yap")
                     }
+
                     NavigationLink(destination: KayitOl()){
                         Text("Henuz hesapiniz yok mu?")
                             .font(.title2)

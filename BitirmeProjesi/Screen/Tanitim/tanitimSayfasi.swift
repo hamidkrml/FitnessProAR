@@ -118,20 +118,8 @@ struct tanitimSayfasi: View {
            
             
         }
-        /// Veriler cekiliyor Network kisimi calisiyor 
-        .onAppear{
-            NetworkMeneger.shared.getuser { result in
-                switch result{
-                case .success(let success):
-                    success.forEach{ user in
-                        print(user.username ?? "hamit")
-                    }
-                case .failure(let failure):
-                    print(failure.localizedDescription)
-                }
-            }
-            
-        }
+        
+        
         .padding(.horizontal, 20)
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)

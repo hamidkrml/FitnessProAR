@@ -21,11 +21,13 @@ class FirbaseViewModel:ObservableObject{
     }
     
     func setupSubscibers(){
-        service.$user1.sink{[weak self] user1 in
-            self?.user1 = user1
-        }
-        .store(in: &cancellables)
-    }
         
+        service.$user1
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] user1 in
+                self?.user1 = user1
+            }
+            .store(in: &cancellables)
+    }
 }
 

@@ -7,10 +7,6 @@
 
 import Foundation
 
-
-
-
-
 protocol EndPointProtocol{
     var baseURL: String { get }
     var path: String { get }
@@ -34,25 +30,25 @@ enum HttpMethod : String{
 /// farkli farkli path icin tanimlayacagiz
 enum EndPoint{
     case getUsers
-    case comments(postID:String)
+    
 }
 
 
 
 extension EndPoint:EndPointProtocol{
     var baseURL: String {
-        return "https://jsonplaceholder.typicode.com"
+        return "https://valyuta.com"
     }
     
     
     var path: String {
-        return "/users"
+        return "/api/get_currency_list_for_app"
     }
     
     var method: HttpMethod {
         switch self {
         case .getUsers: return .get
-        case .comments: return .get
+        
             
         }
     }
@@ -61,32 +57,22 @@ extension EndPoint:EndPointProtocol{
 //                var header: [String:String] = ["kimlik dogrulama ":"\(token)token burasi olacak"]
         return nil
     }
-    
     func request() -> URLRequest {
-        guard var commpents = URLComponents(string: baseURL) else {
-            fatalError("Eror 404")
-            
-        }
-        if case .comments(let id) = self{
-            commpents.queryItems = [URLQueryItem(name: "postid", value: id)]
-        }
-        
-        commpents.path = path
-        var request  = URLRequest(url: commpents.url!)
-        request.httpMethod = method.rawValue
-        if let headrs = headrs{
-            for (key,value) in headrs{
-                request.setValue(value, forHTTPHeaderField: key)
+            guard var commpents = URLComponents(string: baseURL)else{
+                fatalError("url hatalidir")
             }
+            commpents.path = path
+            var request = URLRequest(url: commpents.url!)
+            request.httpMethod = method.rawValue
+            
+            
+            if let header = headrs{
+                for (key,value) in header{
+                    request.setValue(value, forHTTPHeaderField: key)
+                }
+            }
+            return request
         }
-        return request
-    }
-
-  
-    
-    
-        
         
         
     }
-

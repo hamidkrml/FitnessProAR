@@ -6,7 +6,7 @@
 //
 import Foundation
 import FirebaseAuth
-
+import SwiftUI
 
 class LoginFirbase{
 
@@ -19,7 +19,17 @@ class LoginFirbase{
     }
     
       
-    func login(email:String, password:String)async throws{}
+    func login(email:String, password:String)async throws{
+        
+        
+        do{
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.user1 = result.user
+        }catch{
+            let hata = Text("Kullanci adiniz Veya sifreniz yanlisdir\(error.localizedDescription)")
+        }
+        
+    }
     
     func createUser(email:String,password:String)async throws{
         do{
@@ -32,7 +42,11 @@ class LoginFirbase{
     
     func loadUserData()async throws{}
     
-    func signout(){}
+    func signout(){
+        /// firbase kullanci adindan dusecek
+        try? Auth.auth().signOut()
+        self.user1 = nil
+    }
     
     
 }
